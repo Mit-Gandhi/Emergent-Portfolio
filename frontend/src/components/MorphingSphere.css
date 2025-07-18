@@ -55,8 +55,9 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .sphere-popup {
-    top: 1rem;
-    right: 1rem;
+    top: 50%;
+    right: -1rem;
+    transform: translateY(-50%);
   }
   
   .popup-content {
@@ -67,8 +68,9 @@
 
 @media (max-width: 480px) {
   .sphere-popup {
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 50%;
+    right: -0.5rem;
+    transform: translateY(-50%);
   }
   
   .popup-content {
