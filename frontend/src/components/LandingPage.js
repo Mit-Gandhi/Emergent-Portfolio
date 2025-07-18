@@ -99,7 +99,7 @@ const LandingPage = () => {
               transition={{ duration: 1, delay: 0.8 }}
               className="robot-container"
             >
-              <AnimatedRobot />
+              <MorphingSphere />
             </motion.div>
           </div>
         </div>
