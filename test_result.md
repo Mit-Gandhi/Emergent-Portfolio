@@ -109,52 +109,64 @@
 
 ## frontend:
   - task: "Remove 'Perhaps you?' text from components"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "/app/frontend/src/components/LandingPage.js, /app/frontend/src/pages/Home.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Task identified - need to remove chat bubble text from both components"
+      - working: true
+        agent: "main"
+        comment: "Successfully removed 'Perhaps you?' text from both LandingPage and Home components"
 
   - task: "Create morphing sphere with dynamic shape changes"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "/app/frontend/src/components/MorphingSphere.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Task identified - need to create autonomous morphing sphere using Three.js"
+      - working: true
+        agent: "main"
+        comment: "Successfully created MorphingSphere component with continuous shape morphing using Three.js"
 
   - task: "Implement custom cursor matching website theme"
-    implemented: false
-    working: "NA"
-    file: "/app/frontend/src/index.css"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/index.css, /app/frontend/src/components/CustomCursor.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Task identified - need to create custom cursor that follows mouse movement"
+      - working: true
+        agent: "main"
+        comment: "Successfully implemented custom cursor with green theme and hover effects"
 
   - task: "Add popup message from sphere after 1 second"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "/app/frontend/src/components/MorphingSphere.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Task identified - need to add animated popup message from sphere"
+      - working: true
+        agent: "main"
+        comment: "Successfully added popup message 'Hi, welcome to the portfolio...' with timer and animations"
 
 ## backend:
   - task: "No backend changes required"
