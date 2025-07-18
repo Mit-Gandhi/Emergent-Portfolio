@@ -73,14 +73,10 @@ const About = () => {
               </div>
               <div className="section-content">
                 <p>
-                  I'm a passionate AI/ML Engineer with a strong background in developing intelligent solutions 
-                  that solve real-world problems. With expertise in Machine Learning, Deep Learning, Computer Vision, 
-                  and Natural Language Processing, I transform complex data into actionable insights.
+                  Hi, I'm Mit Gandhi, a data enthusiast passionate about transforming raw data into actionable insights. With expertise in data analytics, machine learning and AI, I specialize in building intelligent solutions that drive innovation and efficiency.
                 </p>
                 <p>
-                  My journey in AI began with a fascination for how machines can learn and adapt. Today, I specialize 
-                  in building robust ML models, implementing cutting-edge deep learning architectures, and creating 
-                  AI-powered applications that make a difference.
+                  I thrive on solving complex problems, uncovering hidden patterns in data, and leveraging AI to make smarter decisions. Whether it's predictive modeling, deep learning, or data visualization, my work is driven by curiosity and a commitment to excellence. Welcome to my portfolio—where data meets intelligence and possibilities become reality.
                 </p>
               </div>
             </div>
