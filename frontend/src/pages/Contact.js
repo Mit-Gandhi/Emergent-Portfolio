@@ -41,7 +41,7 @@ const Contact = () => {
       // Send email using EmailJS
       const response = await emailjs.send(
         'service_631864o', // Your service ID
-        'template_default', // You can customize this template ID
+        'template_default', // Default template ID
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -49,7 +49,7 @@ const Contact = () => {
           message: formData.message,
           to_email: 'gandhimit04@gmail.com'
         },
-        'YOUR_PUBLIC_KEY' // You'll need to provide your EmailJS public key
+        'dVQYCgrfSC8YCt8gn' // Your EmailJS public key
       );
 
       if (response.status === 200) {
