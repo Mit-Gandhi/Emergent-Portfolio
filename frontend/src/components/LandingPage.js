@@ -5,28 +5,6 @@ import MorphingSphere from './MorphingSphere';
 import './LandingPage.css';
 import './MorphingSphere.css';
 
-const AnimatedRobot = () => {
-  return (
-    <Canvas camera={{ position: [0, 0, 5] }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <Float speed={1.5} rotationIntensity={1} floatIntensity={0.5}>
-        <Sphere args={[1, 100, 200]} scale={2}>
-          <MeshDistortMaterial
-            color="#10b981"
-            attach="material"
-            distort={0.3}
-            speed={2}
-            roughness={0.1}
-            metalness={0.8}
-          />
-        </Sphere>
-      </Float>
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2} />
-    </Canvas>
-  );
-};
-
 const LandingPage = () => {
   const handleResumeDownload = () => {
     window.open('https://drive.google.com/file/d/1jPubZc-G8G06rN1EyWvsRNLmy5v0tafq/view?usp=sharing', '_blank');
