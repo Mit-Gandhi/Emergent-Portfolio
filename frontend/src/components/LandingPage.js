@@ -123,15 +123,6 @@ const LandingPage = () => {
             >
               <AnimatedRobot />
             </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="chat-bubble"
-            >
-              <span>Perhaps you?</span>
-            </motion.div>
           </div>
         </div>
 
