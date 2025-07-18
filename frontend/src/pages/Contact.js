@@ -6,11 +6,11 @@ import {
   MapPin, 
   Linkedin, 
   Github, 
-  Globe, 
   Send,
   User,
   MessageCircle
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import Navigation from '../components/Navigation';
 import './Contact.css';
 
@@ -22,6 +22,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -31,22 +32,44 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Create email link
-    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
-    const emailLink = `mailto:gandhimit04@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Open email client
-    window.location.href = emailLink;
-    
-    // Reset form
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        'service_631864o', // Your service ID
+        'template_default', // You can customize this template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'gandhimit04@gmail.com'
+        },
+        'YOUR_PUBLIC_KEY' // You'll need to provide your EmailJS public key
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message sent successfully! I\'ll get back to you soon.'
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again or contact me directly.'
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
