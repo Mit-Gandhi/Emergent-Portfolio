@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, MeshDistortMaterial, Float } from '@react-three/drei';
 import { Download } from 'lucide-react';
+import MorphingSphere from './MorphingSphere';
 import './LandingPage.css';
+import './MorphingSphere.css';
 
 const AnimatedRobot = () => {
   return (
