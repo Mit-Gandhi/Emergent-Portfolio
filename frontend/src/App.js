@@ -4,11 +4,13 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <CustomCursor />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
