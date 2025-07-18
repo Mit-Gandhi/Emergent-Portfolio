@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
+import MorphingSphere from '../components/MorphingSphere';
 import './Home.css';
+import '../components/MorphingSphere.css';
 
 const Home = () => {
   const handleResumeDownload = () => {
