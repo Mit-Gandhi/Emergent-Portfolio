@@ -79,12 +79,6 @@ const Contact = () => {
       label: "GitHub",
       value: "Mit-Gandhi",
       link: "https://github.com/Mit-Gandhi"
-    },
-    {
-      icon: Globe,
-      label: "Portfolio",
-      value: "mit-gandhi.github.io",
-      link: "https://mit-gandhi.github.io/Portfolio/"
     }
   ];
 
