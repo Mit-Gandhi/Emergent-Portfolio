@@ -240,6 +240,16 @@ const Contact = () => {
                   <Send size={16} />
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>
+                
+                {submitStatus && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`submit-status ${submitStatus.type}`}
+                  >
+                    {submitStatus.message}
+                  </motion.div>
+                )}
               </form>
             </div>
           </motion.div>
