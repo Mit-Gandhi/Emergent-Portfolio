@@ -101,3 +101,90 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+## user_problem_statement: |
+  Portfolio website enhancement: Add morphing sphere with shape changes, remove "Perhaps you?" text, 
+  implement custom cursor matching website theme, add popup message from sphere after 1 second saying 
+  "Hi, welcome to the portfolio...", make sphere autonomous and non-interactive
+
+## frontend:
+  - task: "Remove 'Perhaps you?' text from components"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/LandingPage.js, /app/frontend/src/pages/Home.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to remove chat bubble text from both components"
+
+  - task: "Create morphing sphere with dynamic shape changes"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/MorphingSphere.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to create autonomous morphing sphere using Three.js"
+
+  - task: "Implement custom cursor matching website theme"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/index.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to create custom cursor that follows mouse movement"
+
+  - task: "Add popup message from sphere after 1 second"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/MorphingSphere.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to add animated popup message from sphere"
+
+## backend:
+  - task: "No backend changes required"
+    implemented: true
+    working: true
+    file: "N/A"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "This is a frontend-only enhancement task"
+
+## metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+## test_plan:
+  current_focus:
+    - "Remove 'Perhaps you?' text from components"
+    - "Create morphing sphere with dynamic shape changes"
+    - "Implement custom cursor matching website theme"
+    - "Add popup message from sphere after 1 second"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+## agent_communication:
+  - agent: "main"
+    message: "Starting frontend enhancement task - morphing sphere, custom cursor, popup message, and text removal"
