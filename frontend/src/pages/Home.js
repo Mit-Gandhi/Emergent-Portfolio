@@ -75,11 +75,7 @@ const Home = () => {
               transition={{ duration: 1, delay: 0.8 }}
               className="robot-container"
             >
-              <img 
-                src="https://images.pexels.com/photos/8294598/pexels-photo-8294598.jpeg" 
-                alt="AI/ML Robot" 
-                className="robot-image"
-              />
+              <MorphingSphere />
             </motion.div>
           </div>
         </div>
