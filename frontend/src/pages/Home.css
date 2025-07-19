@@ -199,7 +199,7 @@
 
 @media (max-width: 768px) {
   .main-content {
-    padding: 6rem 1rem 2rem;
+    padding: 8rem 1rem 2rem; /* Increased top padding for mobile nav */
   }
   
   .title-line {
@@ -213,11 +213,6 @@
   .robot-container {
     width: 250px;
     height: 250px;
-  }
-  
-  .chat-bubble {
-    top: 1rem;
-    right: 1rem;
   }
   
   .footer-large {
