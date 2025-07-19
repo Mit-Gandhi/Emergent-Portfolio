@@ -103,24 +103,6 @@ const About = () => {
                     Developed a comprehensive system for facial analysis, integrating recognition, detection, and crowd-based object tracking.
                   </p>
                 </div>
-                <div className="experience-item">
-                  <h4>AI/ML Engineer</h4>
-                  <p className="company">Tech Innovation Lab</p>
-                  <p className="duration">2023 - Present</p>
-                  <p className="description">
-                    Developing advanced machine learning models for computer vision and NLP applications. 
-                    Leading projects in generative AI and implementing MLOps practices.
-                  </p>
-                </div>
-                <div className="experience-item">
-                  <h4>Data Scientist</h4>
-                  <p className="company">Analytics Solutions Inc.</p>
-                  <p className="duration">2022 - 2023</p>
-                  <p className="description">
-                    Built predictive models and data pipelines for business intelligence. 
-                    Specialized in deep learning for image recognition and natural language processing.
-                  </p>
-                </div>
               </div>
             </div>
           </motion.div>
