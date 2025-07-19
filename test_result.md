@@ -103,9 +103,39 @@
 #====================================================================================================
 
 ## user_problem_statement: |
-  Portfolio website continuation: 1) Remove download logo from Resume button - keep only "Resume" text and display resume when clicked, 2) Move "Hi, welcome to the portfolio..." text above sphere and closer to it, 3) Add AI/ML Research Intern experience at CDAC Mumbai, 4) Update education with real data (Bharati Vidyapeeth College and H.M.B Sardar High School), 5) Change scrollbar color to match website green theme
+  Portfolio website continuation: Replace the existing morphing sphere component with a Sketchfab embed iframe containing a 3D robot model and change the color of the component to match the website's green theme
 
 ## frontend:
+  - task: "Replace morphing sphere with Sketchfab 3D robot"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/MorphingSphere.js, /app/frontend/src/components/MorphingSphere.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to replace Three.js morphing sphere with Sketchfab iframe embed of cute robot model"
+      - working: true
+        agent: "main"
+        comment: "Successfully replaced morphing sphere with Sketchfab 3D robot embed. Removed Three.js dependencies and implemented responsive iframe with green theme styling. Welcome popup functionality preserved."
+
+  - task: "Style robot component with green theme"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/MorphingSphere.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to match component styling with website's green color theme (#10b981)"
+      - working: true
+        agent: "main"
+        comment: "Successfully styled robot embed with green border, shadow effects, hover animations, and responsive design. Component perfectly matches website's color theme."
+
   - task: "Remove download icon from Resume button"
     implemented: true
     working: true
@@ -134,7 +164,7 @@
         comment: "Task identified - need to move popup message to appear above sphere and closer to it"
       - working: true
         agent: "main"
-        comment: "Successfully moved welcome message above sphere with proper positioning and arrow pointing down to sphere"
+        comment: "Successfully moved welcome message above sphere with proper positioning and arrow pointing down to sphere. Now works with new robot component."
 
   - task: "Add AI/ML Research Intern experience"
     implemented: true
@@ -197,8 +227,8 @@
         comment: "Successfully removed 'Perhaps you?' text from both LandingPage and Home components"
 
   - task: "Create morphing sphere with dynamic shape changes"
-    implemented: true
-    working: true
+    implemented: false
+    working: false
     file: "/app/frontend/src/components/MorphingSphere.js"
     stuck_count: 0
     priority: "high"
@@ -210,6 +240,9 @@
       - working: true
         agent: "main"
         comment: "Successfully created MorphingSphere component with continuous shape morphing using Three.js"
+      - working: false
+        agent: "main"
+        comment: "Component replaced with Sketchfab 3D robot per user request. Morphing sphere no longer needed."
 
   - task: "Implement custom cursor matching website theme"
     implemented: true
@@ -240,6 +273,9 @@
       - working: true
         agent: "main"
         comment: "Successfully added popup message 'Hi, welcome to the portfolio...' with timer and animations. Now positioned above sphere."
+      - working: true
+        agent: "main"
+        comment: "Popup functionality preserved and working with new Sketchfab robot component"
 
   - task: "Fix cursor synchronization and remove click artifacts"
     implemented: true
