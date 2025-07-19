@@ -1,68 +1,25 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float } from '@react-three/drei';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import * as THREE from 'three';
 
-const MorphingSphere = () => {
-  const meshRef = useRef();
-  const [showPopup, setShowPopup] = useState(false);
-
-  useFrame(({ clock }) => {
-    const time = clock.getElapsedTime();
-    
-    if (meshRef.current) {
-      // Create dynamic morphing effect
-      const geometry = meshRef.current.geometry;
-      const position = geometry.attributes.position;
-      
-      // Apply morphing to vertices
-      for (let i = 0; i < position.count; i++) {
-        const x = position.getX(i);
-        const y = position.getY(i);
-        const z = position.getZ(i);
-        
-        // Create wave-like morphing effect
-        const distortion = Math.sin(time * 2 + x * 3) * 0.1 + 
-                          Math.cos(time * 1.5 + y * 2) * 0.1 + 
-                          Math.sin(time * 3 + z * 4) * 0.05;
-        
-        // Apply distortion to create morphing effect
-        const length = Math.sqrt(x * x + y * y + z * z);
-        const normalizedX = x / length;
-        const normalizedY = y / length;
-        const normalizedZ = z / length;
-        
-        position.setXYZ(
-          i,
-          normalizedX * (1 + distortion),
-          normalizedY * (1 + distortion),
-          normalizedZ * (1 + distortion)
-        );
-      }
-      
-      position.needsUpdate = true;
-      geometry.computeVertexNormals();
-      
-      // Rotation animation
-      meshRef.current.rotation.x = time * 0.2;
-      meshRef.current.rotation.y = time * 0.3;
-    }
-  });
-
+const SketchfabRobot = () => {
   return (
-    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.3}>
-      <mesh ref={meshRef}>
-        <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial
-          color="#10b981"
-          metalness={0.8}
-          roughness={0.2}
-          emissive="#10b981"
-          emissiveIntensity={0.1}
-        />
-      </mesh>
-    </Float>
+    <div className="sketchfab-embed-wrapper">
+      <iframe 
+        title="Late - #CuteRobotChallenge" 
+        frameBorder="0" 
+        allowFullScreen 
+        mozallowfullscreen="true" 
+        webkitallowfullscreen="true" 
+        allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking="true"
+        execution-while-out-of-viewport="true"
+        execution-while-not-rendered="true" 
+        web-share="true"
+        width="640" 
+        height="480" 
+        src="https://sketchfab.com/models/cb2a7911a5f243dcbe8480946a3bd5fe/embed?autostart=1&camera=0&transparent=1&ui_hint=0&dnt=1">
+      </iframe>
+    </div>
   );
 };
 
