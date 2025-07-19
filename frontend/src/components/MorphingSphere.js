@@ -88,6 +88,23 @@ const MorphingSphereContainer = () => {
 
   return (
     <div className="morphing-sphere-container">
+      {/* Welcome message above the sphere */}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="sphere-welcome-message"
+          >
+            <div className="welcome-content">
+              <span>Hi, welcome to the portfolio...</span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
         <ambientLight intensity={0.4} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -100,22 +117,6 @@ const MorphingSphereContainer = () => {
           autoRotate={false}
         />
       </Canvas>
-      
-      <AnimatePresence>
-        {showPopup && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: -20 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="sphere-popup"
-          >
-            <div className="popup-content">
-              <span>Hi, welcome to the portfolio...</span>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
