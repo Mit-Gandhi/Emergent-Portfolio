@@ -216,48 +216,6 @@
   cursor: not-allowed;
 }
 
-/* Alternative Contact Notice */
-.alternative-contact-notice {
-  background: rgba(16, 185, 129, 0.05);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.alternative-contact-notice p {
-  margin: 0 0 0.5rem 0;
-  color: #333;
-}
-
-.alternative-contact-notice p:first-child {
-  color: #10b981;
-  font-weight: 600;
-}
-
-.alternative-contact-notice ul {
-  margin: 0.5rem 0 0 0;
-  padding-left: 1rem;
-  list-style: none;
-}
-
-.alternative-contact-notice li {
-  margin-bottom: 0.5rem;
-  color: #555;
-}
-
-.alternative-contact-notice a {
-  color: #10b981;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.alternative-contact-notice a:hover {
-  color: #059669;
-  text-decoration: underline;
-}
-
 /* Call to Action */
 .contact-cta {
   grid-column: 1 / -1;
