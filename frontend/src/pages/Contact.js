@@ -267,16 +267,6 @@ const Contact = () => {
                   </motion.div>
                 )}
               </form>
-              
-              {/* Alternative Contact Notice */}
-              <div className="alternative-contact-notice">
-                <p><strong>Having trouble with the form?</strong></p>
-                <p>You can also reach me directly at:</p>
-                <ul>
-                  <li>📧 <a href="mailto:gandhimit04@gmail.com">gandhimit04@gmail.com</a></li>
-                  <li>💼 <a href="https://www.linkedin.com/in/mit-gandhi-a3281628a/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-                </ul>
-              </div>
             </div>
           </motion.div>
         </div>
