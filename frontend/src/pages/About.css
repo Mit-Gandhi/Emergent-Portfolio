@@ -188,6 +188,25 @@
   margin-bottom: 0.5rem;
 }
 
+.education-item .institution {
+  color: #10b981;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.education-item .location {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+.education-item .duration {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Skills Grid */
 .skills-grid {
   display: grid;
