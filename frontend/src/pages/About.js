@@ -206,28 +206,64 @@ const About = () => {
               <div className="section-content">
                 <div className="achievements-grid">
                   <div className="achievement-item">
-                    <h4>Google Cloud Professional ML Engineer</h4>
-                    <p>Certified in designing and building ML models on GCP</p>
+                    <h4>HackWithGujarat 2025 Winner</h4>
+                    <p>Won the prestigious hackathon competition in Gujarat</p>
+                    <a 
+                      href="https://www.linkedin.com/posts/mit-gandhi-a3281628a_hackwithgujarat-hackwithgujarat-hackathonwinner-activity-7337790395495387136-a-Nv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEY-f0YBRmx-6h9xDstubYBAWg9X46BbJ08" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="view-button"
+                    >
+                      View
+                    </a>
                   </div>
                   <div className="achievement-item">
-                    <h4>AWS Machine Learning Specialty</h4>
-                    <p>Expert-level certification in AWS ML services</p>
+                    <h4>IEEE Paper Selection & Presentation</h4>
+                    <p>Research paper selected and presented at IEEE conference</p>
+                    <a 
+                      href="https://www.linkedin.com/posts/mit-gandhi-a3281628a_ieee-presentation-certificate-activity-7351614241491042305-62H0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEY-f0YBRmx-6h9xDstubYBAWg9X46BbJ08" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="view-button"
+                    >
+                      View
+                    </a>
                   </div>
                   <div className="achievement-item">
-                    <h4>TensorFlow Developer Certificate</h4>
-                    <p>Certified in building and training neural networks</p>
+                    <h4>HackOverFlow 3.0</h4>
+                    <p>Participated in innovative AI-driven criminal detection hackathon</p>
+                    <a 
+                      href="https://www.linkedin.com/posts/mit-gandhi-a3281628a_innovation-ai-criminaldetection-activity-7312046086334898176-XjyB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEY-f0YBRmx-6h9xDstubYBAWg9X46BbJ08" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="view-button"
+                    >
+                      View
+                    </a>
                   </div>
                   <div className="achievement-item">
-                    <h4>Kaggle Competition Winner</h4>
-                    <p>Top 1% in computer vision challenges</p>
+                    <h4>C-DAC Internship</h4>
+                    <p>Completed internship in backend development and AI</p>
+                    <a 
+                      href="https://www.linkedin.com/posts/mit-gandhi-a3281628a_internship-backenddevelopment-ai-activity-7311735862906519552-HSm3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEY-f0YBRmx-6h9xDstubYBAWg9X46BbJ08" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="view-button"
+                    >
+                      View
+                    </a>
                   </div>
                   <div className="achievement-item">
-                    <h4>Research Publication</h4>
-                    <p>Published papers on deep learning applications</p>
-                  </div>
-                  <div className="achievement-item">
-                    <h4>AI Innovation Award</h4>
-                    <p>Recognized for outstanding contribution to AI research</p>
+                    <h4>Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2025]</h4>
+                    <p>Comprehensive certification in ML, AI, and modern technologies</p>
+                    <a 
+                      href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9cc020f7-675d-42cd-9d26-955eccc6fb13.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="view-button"
+                    >
+                      View
+                    </a>
                   </div>
                 </div>
               </div>
