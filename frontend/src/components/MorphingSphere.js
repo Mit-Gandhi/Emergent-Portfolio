@@ -5,7 +5,7 @@ const SketchfabRobot = () => {
   return (
     <div className="sketchfab-embed-wrapper">
       <iframe 
-        title="Late - #CuteRobotChallenge" 
+        title="Robot" 
         frameBorder="0" 
         allowFullScreen 
         mozallowfullscreen="true" 
@@ -17,7 +17,7 @@ const SketchfabRobot = () => {
         web-share="true"
         width="640" 
         height="480" 
-        src="https://sketchfab.com/models/cb2a7911a5f243dcbe8480946a3bd5fe/embed?autostart=1&camera=0&transparent=1&ui_hint=0&dnt=1">
+        src="https://sketchfab.com/models/cb2a7911a5f243dcbe8480946a3bd5fe/embed?autostart=1&camera=0&transparent=1&ui_controls=0&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_loading=0&preload=1">
       </iframe>
     </div>
   );
