@@ -43,6 +43,17 @@
   border-top: 8px solid #10b981;
 }
 
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.6);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .sphere-welcome-message {
