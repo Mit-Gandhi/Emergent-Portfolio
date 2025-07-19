@@ -96,6 +96,14 @@ const About = () => {
               </div>
               <div className="section-content">
                 <div className="experience-item">
+                  <h4>AI/ML Research Intern</h4>
+                  <p className="company">CDAC, Mumbai</p>
+                  <p className="duration">Feb 2025 - March 2025</p>
+                  <p className="description">
+                    Developed a comprehensive system for facial analysis, integrating recognition, detection, and crowd-based object tracking.
+                  </p>
+                </div>
+                <div className="experience-item">
                   <h4>AI/ML Engineer</h4>
                   <p className="company">Tech Innovation Lab</p>
                   <p className="duration">2023 - Present</p>
