@@ -220,6 +220,13 @@
   .nav-content {
     gap: 1rem;
   }
+  
+  .nav {
+    left: 1rem;
+    right: 1rem;
+    transform: none;
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
