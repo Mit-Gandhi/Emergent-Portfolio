@@ -139,21 +139,21 @@ const About = () => {
               </div>
               <div className="section-content">
                 <div className="education-item">
-                  <h4>Master of Science in Artificial Intelligence</h4>
-                  <p className="institution">Indian Institute of Technology</p>
-                  <p className="duration">2020 - 2022</p>
+                  <h4>B.E. in Department of Computer Engineering</h4>
+                  <p className="institution">Bharati Vidyapeeth College of Engineering</p>
+                  <p className="location">Navi Mumbai, Maharashtra</p>
+                  <p className="duration">2022-2026</p>
                   <p className="description">
-                    Specialized in Machine Learning, Deep Learning, and Computer Vision. 
-                    Thesis on "Advanced Neural Networks for Medical Image Analysis".
+                    GPA: 7.5/10
                   </p>
                 </div>
                 <div className="education-item">
-                  <h4>Bachelor of Technology in Computer Science</h4>
-                  <p className="institution">Gujarat Technological University</p>
-                  <p className="duration">2016 - 2020</p>
+                  <h4>HSC - Science</h4>
+                  <p className="institution">H.M.B Sardar High School</p>
+                  <p className="location">Surat, Gujarat</p>
+                  <p className="duration">2021-2022</p>
                   <p className="description">
-                    Strong foundation in computer science fundamentals, algorithms, and data structures. 
-                    Graduated with honors.
+                    Total: 67%
                   </p>
                 </div>
               </div>
