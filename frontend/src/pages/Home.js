@@ -6,7 +6,8 @@ import './Home.css';
 import '../components/MorphingSphere.css';
 
 const Home = () => {
-  const handleResumeDownload = () => {
+  const handleResumeDisplay = () => {
+    // Display the resume directly in a new tab instead of downloading
     window.open('https://drive.google.com/file/d/1jPubZc-G8G06rN1EyWvsRNLmy5v0tafq/view?usp=sharing', '_blank');
   };
 
