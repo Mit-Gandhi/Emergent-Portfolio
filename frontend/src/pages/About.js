@@ -157,6 +157,11 @@ const About = () => {
               <div className="section-content">
                 <div className="skills-grid">
                   <div className="skill-category">
+                    <Code size={20} />
+                    <h4>Programming Languages</h4>
+                    <p>Python, Java, C++, HTML, CSS, JavaScript</p>
+                  </div>
+                  <div className="skill-category">
                     <Brain size={20} />
                     <h4>Machine Learning</h4>
                     <p>Python, Scikit-learn, TensorFlow, PyTorch, Keras</p>
@@ -164,22 +169,22 @@ const About = () => {
                   <div className="skill-category">
                     <Zap size={20} />
                     <h4>Deep Learning</h4>
-                    <p>CNN, RNN, LSTM, Transformers, GANs</p>
+                    <p>CNN, LSTM, Transformers, GANs</p>
                   </div>
                   <div className="skill-category">
                     <Eye size={20} />
                     <h4>Computer Vision</h4>
-                    <p>OpenCV, PIL, Image Processing, Object Detection</p>
+                    <p>OpenCV, PIL, Image Processing, Object Detection, YOLO, InsightFace</p>
                   </div>
                   <div className="skill-category">
                     <MessageSquare size={20} />
                     <h4>NLP</h4>
-                    <p>NLTK, spaCy, Transformers, BERT, GPT</p>
+                    <p>NLTK, Transformers, BERT, GPT</p>
                   </div>
                   <div className="skill-category">
                     <Database size={20} />
                     <h4>Data & Tools</h4>
-                    <p>SQL, MongoDB, Docker, Git, AWS, Google Cloud</p>
+                    <p>SQL, Docker, Google Firebase</p>
                   </div>
                 </div>
               </div>
