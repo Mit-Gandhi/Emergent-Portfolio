@@ -58,10 +58,9 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleResumeDownload}
+                onClick={handleResumeDisplay}
                 className="download-btn"
               >
-                <Download size={16} />
                 Resume
               </motion.button>
             </motion.div>
