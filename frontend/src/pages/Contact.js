@@ -38,6 +38,9 @@ const Contact = () => {
     setSubmitStatus(null);
     
     try {
+      // Initialize EmailJS (if not already done)
+      emailjs.init('dVQYCgrfSC8YCt8gn');
+      
       // Send email using EmailJS
       const response = await emailjs.send(
         'service_631864o', // Your service ID
@@ -48,8 +51,7 @@ const Contact = () => {
           subject: formData.subject,
           message: formData.message,
           to_email: 'gandhimit04@gmail.com'
-        },
-        'dVQYCgrfSC8YCt8gn' // Your EmailJS public key
+        }
       );
 
       if (response.status === 200) {
@@ -63,9 +65,23 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
+      
+      // More detailed error handling
+      let errorMessage = 'Failed to send message. ';
+      
+      if (error.status === 412) {
+        errorMessage += 'Email service configuration issue. Please try contacting me directly at gandhimit04@gmail.com or through LinkedIn.';
+      } else if (error.status === 400) {
+        errorMessage += 'Please check all fields are filled correctly.';
+      } else if (error.status === 401) {
+        errorMessage += 'Email service authorization issue. Please contact me directly.';
+      } else {
+        errorMessage += 'Please try again or contact me directly at gandhimit04@gmail.com.';
+      }
+      
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again or contact me directly.'
+        message: errorMessage
       });
     } finally {
       setIsSubmitting(false);
