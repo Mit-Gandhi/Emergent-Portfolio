@@ -314,6 +314,70 @@
   .profile-card {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
+  }
+  
+  .profile-image {
+    margin: 0 auto;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-item {
+    padding-bottom: 3.5rem;
+  }
+  
+  .view-button {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    opacity: 1;
+    transform: none;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  .achievement-item:hover .view-button {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-card {
+    padding: 1.5rem;
+  }
+  
+  .skills-grid {
+    gap: 1rem;
+  }
+  
+  .skill-category {
+    padding: 1rem;
+  }
+  
+  .achievements-grid {
+    gap: 1rem;
+  }
+  
+  .achievement-item {
+    padding: 1rem;
+  }
+}
+    text-align: center;
   }
   
   .profile-image {
