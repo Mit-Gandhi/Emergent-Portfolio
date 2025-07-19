@@ -5,7 +5,62 @@
   height: 100%;
 }
 
-/* Welcome Message Above Sphere */
+/* Robot Embed Container */
+.robot-embed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+/* Sketchfab Embed Styling */
+.sketchfab-embed-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+  transition: all 0.3s ease;
+  max-width: 640px;
+  width: 100%;
+}
+
+.sketchfab-embed-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+  border-color: rgba(16, 185, 129, 0.6);
+}
+
+.sketchfab-embed-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.sketchfab-embed-wrapper:hover::before {
+  opacity: 0.5;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 480px;
+  border-radius: 18px;
+  display: block;
+  background: transparent;
+}
+
+/* Welcome Message Above Robot */
 .sphere-welcome-message {
   position: absolute;
   top: -3rem;
@@ -64,6 +119,14 @@
     font-size: 0.85rem;
     padding: 0.75rem 1.25rem;
   }
+  
+  .sketchfab-embed-wrapper {
+    max-width: 90vw;
+  }
+  
+  .sketchfab-embed-wrapper iframe {
+    height: 360px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -74,5 +137,13 @@
   .welcome-content {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
+  }
+  
+  .sketchfab-embed-wrapper iframe {
+    height: 280px;
+  }
+  
+  .robot-embed-container {
+    min-height: 300px;
   }
 }
