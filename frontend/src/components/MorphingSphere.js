@@ -45,7 +45,7 @@ const MorphingSphereContainer = () => {
 
   return (
     <div className="morphing-sphere-container">
-      {/* Welcome message above the sphere */}
+      {/* Welcome message above the robot */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
@@ -62,18 +62,10 @@ const MorphingSphereContainer = () => {
         )}
       </AnimatePresence>
 
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-        <ambientLight intensity={0.4} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <pointLight position={[-10, -10, -5]} intensity={0.5} color="#10b981" />
-        <MorphingSphere />
-        <OrbitControls 
-          enableZoom={false} 
-          enablePan={false}
-          enableRotate={false}
-          autoRotate={false}
-        />
-      </Canvas>
+      {/* Sketchfab Robot */}
+      <div className="robot-embed-container">
+        <SketchfabRobot />
+      </div>
     </div>
   );
 };
