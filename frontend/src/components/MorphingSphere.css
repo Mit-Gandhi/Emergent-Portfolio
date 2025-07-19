@@ -43,75 +43,24 @@
   border-top: 8px solid #10b981;
 }
 
-/* Sphere Popup */
-.sphere-popup {
-  position: absolute;
-  top: 50%;
-  right: -2rem;
-  transform: translateY(-50%);
-  z-index: 100;
-  pointer-events: none;
-}
-
-.popup-content {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  position: relative;
-  animation: pulse 2s infinite;
-}
-
-.popup-content::before {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 1.5rem;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #10b981;
-}
-
-@keyframes pulse {
-  0%, 100% { 
-    transform: scale(1);
-    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
-  }
-  50% { 
-    transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.6);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .sphere-popup {
-    top: 50%;
-    right: -1rem;
-    transform: translateY(-50%);
+  .sphere-welcome-message {
+    top: -2.5rem;
   }
   
-  .popup-content {
+  .welcome-content {
     font-size: 0.85rem;
     padding: 0.75rem 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
-  .sphere-popup {
-    top: 50%;
-    right: -0.5rem;
-    transform: translateY(-50%);
+  .sphere-welcome-message {
+    top: -2rem;
   }
   
-  .popup-content {
+  .welcome-content {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
   }
