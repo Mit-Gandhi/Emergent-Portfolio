@@ -37,31 +37,6 @@
   border-radius: 20px;
 }
 
-/* Glowing effect for robot */
-.robot-glow-effect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: robotGlow 3s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-@keyframes robotGlow {
-  0% { 
-    opacity: 0.3;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% { 
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-}
-
 /* Welcome Message Above Robot */
 .sphere-welcome-message {
   position: absolute;
@@ -124,11 +99,11 @@
   
   .robot-image-wrapper {
     max-width: 90vw;
-    max-height: 400px;
+    max-height: 450px;
   }
   
   .robot-image {
-    max-height: 400px;
+    max-height: 450px;
   }
 }
 
@@ -143,11 +118,11 @@
   }
   
   .robot-image-wrapper {
-    max-height: 320px;
+    max-height: 350px;
   }
   
   .robot-image {
-    max-height: 320px;
+    max-height: 350px;
   }
   
   .robot-image-container {
