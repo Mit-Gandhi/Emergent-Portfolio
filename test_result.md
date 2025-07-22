@@ -337,6 +337,18 @@
         agent: "main"
         comment: "Successfully updated About page introduction with data enthusiast focused content"
 
+  - task: "Replace Sketchfab 3D robot with static robot image"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/MorphingSphere.js, /app/frontend/src/components/MorphingSphere.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to replace Sketchfab 3D robot iframe with static robot image (purple/blue glowing head, white spherical body) while maintaining green theme styling and welcome message functionality"
+
 ## backend:
   - task: "No backend changes required"
     implemented: true
