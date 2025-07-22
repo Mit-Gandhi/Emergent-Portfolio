@@ -149,12 +149,13 @@
     padding: 0.75rem 1.25rem;
   }
   
-  .sketchfab-embed-wrapper {
+  .robot-image-wrapper {
     max-width: 90vw;
+    max-height: 400px;
   }
   
-  .sketchfab-embed-wrapper iframe {
-    height: 360px;
+  .robot-image {
+    max-height: 400px;
   }
 }
 
@@ -168,11 +169,15 @@
     padding: 0.5rem 1rem;
   }
   
-  .sketchfab-embed-wrapper iframe {
-    height: 280px;
+  .robot-image-wrapper {
+    max-height: 320px;
   }
   
-  .robot-embed-container {
+  .robot-image {
+    max-height: 320px;
+  }
+  
+  .robot-image-container {
     min-height: 300px;
   }
 }
