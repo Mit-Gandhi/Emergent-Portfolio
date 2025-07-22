@@ -4,25 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 const StaticRobotImage = () => {
   return (
     <div className="robot-image-wrapper">
-      <motion.img 
+      <img 
         src="/images/robot.png"
         alt="Cute Robot with Purple/Blue Glowing Head" 
         className="robot-image"
-        initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
-        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        whileHover={{ 
-          scale: 1.05,
-          rotateY: 5,
-          transition: { duration: 0.3 }
-        }}
         onError={(e) => {
           // Fallback to Unsplash image if robot.png is not found
           e.target.src = "https://images.unsplash.com/photo-1657641898365-48ae7d64e676?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3";
         }}
       />
-      {/* Glowing effect overlay */}
-      <div className="robot-glow-effect"></div>
     </div>
   );
 };
