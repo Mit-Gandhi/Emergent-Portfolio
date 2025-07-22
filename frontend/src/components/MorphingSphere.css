@@ -18,50 +18,23 @@
 /* Robot Image Wrapper */
 .robot-image-wrapper {
   position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
-  border: 2px solid rgba(16, 185, 129, 0.4);
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
-  transition: all 0.3s ease;
-  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
   width: 100%;
-  max-height: 500px;
+  max-height: 600px;
   height: auto;
-}
-
-.robot-image-wrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
-  border-color: rgba(16, 185, 129, 0.6);
-}
-
-.robot-image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  border-radius: 22px;
-  z-index: -1;
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
-}
-
-.robot-image-wrapper:hover::before {
-  opacity: 0.5;
 }
 
 .robot-image {
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 600px;
+  max-width: 600px;
   object-fit: contain;
-  border-radius: 18px;
   display: block;
-  background: transparent;
+  border-radius: 20px;
 }
 
 /* Glowing effect for robot */
