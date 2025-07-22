@@ -62,9 +62,9 @@ const MorphingSphereContainer = () => {
         )}
       </AnimatePresence>
 
-      {/* Sketchfab Robot */}
-      <div className="robot-embed-container">
-        <SketchfabRobot />
+      {/* Static Robot Image */}
+      <div className="robot-image-container">
+        <StaticRobotImage />
       </div>
     </div>
   );
