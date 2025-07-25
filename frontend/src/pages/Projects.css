@@ -197,6 +197,18 @@
   margin: 0 auto;
 }
 
+/* Timeline Header Consistency */
+.page-title-timeline {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: #000 !important;
+}
+
+.page-subtitle-timeline {
+  font-size: 1.25rem !important;
+  color: #666 !important;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
