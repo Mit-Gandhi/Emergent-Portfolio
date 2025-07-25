@@ -519,6 +519,9 @@
       - working: true
         agent: "main"
         comment: "Successfully completed all continuation tasks! 1) Fixed text formatting - Timeline header now uses consistent 3rem font size and 800 font weight matching other pages 2) Resolved scrollbar issues - Added overflow-x: hidden to prevent horizontal scrolling, ensuring only single vertical scrollbar 3) Updated CrimeVision AI banner - Replaced with user's uploaded banner1.jpg image 4) Reduced loading screen time to 0.5s for better UX 5) Tech stack already included GANs, Firebase, FAISS, InsightFace as requested"
+      - working: true
+        agent: "main"
+        comment: "ADDITIONAL CONTINUATION FIXES COMPLETED: 1) Enhanced subtitle spacing - Added mb-16 to timeline header wrapper for proper spacing between subtitle and content, now matches About page spacing 2) Updated second project to Brain Tumor Detection - Changed from AI Medical Diagnosis to Brain Tumor Detection with GitHub repo https://github.com/Mit-Gandhi/Brain-Tumor-Detection, added comprehensive tech stack including YOLOv11, TensorFlow, PyTorch, Medical Imaging, OpenCV for brain tumor detection system 3) Verified scrollbar functionality - Confirmed single vertical scrollbar (6px green-themed) working correctly with page height 4367px > viewport 1080px. All issues resolved successfully!"
 
 ## backend:
   - task: "No backend changes required"
