@@ -26,8 +26,13 @@ const CustomCursor = () => {
     const handleMouseEnter = () => setIsHovering(true);
     const handleMouseLeave = () => setIsHovering(false);
 
+    const handleMouseDown = () => setIsClicking(true);
+    const handleMouseUp = () => setIsClicking(false);
+
     // Add mouse move listener
     document.addEventListener('mousemove', updateMousePosition);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
 
     // Add hover listeners to interactive elements
     const interactiveElements = document.querySelectorAll('button, a, input, textarea, select, [role="button"]');
@@ -38,6 +43,8 @@ const CustomCursor = () => {
 
     return () => {
       document.removeEventListener('mousemove', updateMousePosition);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mouseup', handleMouseUp);
       interactiveElements.forEach(el => {
         el.removeEventListener('mouseenter', handleMouseEnter);
         el.removeEventListener('mouseleave', handleMouseLeave);
