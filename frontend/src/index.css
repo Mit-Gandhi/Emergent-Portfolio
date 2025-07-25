@@ -142,8 +142,8 @@ button:hover, a[role="button"]:hover {
     background: #f5f7fa;
 }
 
-/* Firefox Scrollbar */
+/* Firefox Scrollbar - Small and Primary */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #10b981 #f5f7fa;
+    scrollbar-color: #10b981 rgba(245, 247, 250, 0.5);
 }
