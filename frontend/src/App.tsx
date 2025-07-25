@@ -25,7 +25,7 @@ function AppContent() {
       setTimeout(() => {
         setShowContent(true);
       }, 100);
-    }, 500); // Show loading for 0.5 seconds
+    }, 50); // Minimal loading for testing
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
