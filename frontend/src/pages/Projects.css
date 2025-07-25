@@ -404,6 +404,32 @@
   .projects-footer {
     padding: 2rem 1rem;
   }
+
+  /* Timeline Mobile Styles */
+  .timeline-project {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .timeline-project-content {
+    padding: 1.25rem;
+  }
+  
+  .timeline-project-title {
+    font-size: 1.25rem;
+  }
+  
+  .timeline-project-description {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-project-links {
+    flex-direction: column;
+  }
+  
+  .timeline-project-link {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
