@@ -102,6 +102,22 @@ button:active, button:focus {
     box-shadow: none !important;
 }
 
+/* Button Click Effects */
+button, a[role="button"], .project-link {
+    transition: all 0.1s ease;
+}
+
+button:active, a[role="button"]:active, .project-link:active {
+    transform: scale(0.95);
+    filter: brightness(0.9);
+}
+
+/* Enhanced button hover effects */
+button:hover, a[role="button"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
