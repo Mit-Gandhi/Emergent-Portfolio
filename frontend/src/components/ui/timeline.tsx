@@ -42,11 +42,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       }}
       ref={containerRef}
     >
-      <div className="about-content">
-        <div className="about-header">
-          <h2 className="page-title">My Project Journey</h2>
-          <p className="page-subtitle">Exploring AI/ML solutions that solve real-world problems through innovative technology.</p>
-        </div>
+      <div className="timeline-header">
+        <h2 className="page-title-timeline">My Project Journey</h2>
+        <p className="page-subtitle-timeline">Exploring AI/ML solutions that solve real-world problems through innovative technology.</p>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
