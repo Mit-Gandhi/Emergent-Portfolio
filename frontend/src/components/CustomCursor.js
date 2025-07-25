@@ -56,7 +56,7 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorRef}
-        className={`custom-cursor ${isHovering ? 'hover' : ''}`}
+        className={`custom-cursor ${isHovering ? 'hover' : ''} ${isClicking ? 'clicking' : ''}`}
         style={{
           left: `${mousePosition.x - 10}px`,
           top: `${mousePosition.y - 10}px`,
@@ -64,7 +64,7 @@ const CustomCursor = () => {
       />
       <div
         ref={trailRef}
-        className={`custom-cursor-trail ${isHovering ? 'hover' : ''}`}
+        className={`custom-cursor-trail ${isHovering ? 'hover' : ''} ${isClicking ? 'clicking' : ''}`}
         style={{
           left: `${mousePosition.x - 20}px`,
           top: `${mousePosition.y - 20}px`,
