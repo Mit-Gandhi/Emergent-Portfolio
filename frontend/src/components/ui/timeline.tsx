@@ -39,10 +39,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
-        <h2 className="text-5xl font-extrabold color-black mb-4 max-w-4xl mx-auto" style={{ fontSize: '3rem', fontWeight: '800', color: '#000' }}>
+        <h2 className="text-5xl font-extrabold text-black mb-4 max-w-4xl mx-auto page-title-timeline">
           My Project Journey
         </h2>
-        <p className="text-xl color-gray-600 max-w-xl mx-auto" style={{ fontSize: '1.25rem', color: '#666' }}>
+        <p className="text-xl text-gray-600 max-w-xl mx-auto page-subtitle-timeline">
           Exploring AI/ML solutions that solve real-world problems through innovative technology.
         </p>
       </div>
