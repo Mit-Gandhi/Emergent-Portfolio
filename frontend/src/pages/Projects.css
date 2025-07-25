@@ -10,10 +10,14 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .timeline-wrapper {
   padding-top: 4rem;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Timeline Project Styles */
