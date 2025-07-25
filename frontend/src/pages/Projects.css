@@ -201,16 +201,19 @@
   margin: 0 auto;
 }
 
-/* Timeline Header Consistency */
+/* Timeline Header Consistency - Match About Page */
 .page-title-timeline {
   font-size: 3rem !important;
   font-weight: 800 !important;
   color: #000 !important;
+  margin-bottom: 1rem !important;
 }
 
 .page-subtitle-timeline {
   font-size: 1.25rem !important;
   color: #666 !important;
+  margin: 0 auto !important;
+  max-width: 600px !important;
 }
 
 .projects-grid {
