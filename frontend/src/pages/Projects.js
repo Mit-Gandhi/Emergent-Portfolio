@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="timeline-project">
           <div className="timeline-project-header">
             <img 
-              src="https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?w=600&h=400&fit=crop" 
+              src="/images/banner1.jpg" 
               alt="CrimeVision AI"
               className="timeline-project-image"
             />
