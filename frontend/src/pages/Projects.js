@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code, Database, Eye, MessageSquare, Brain, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
+import { Timeline } from '../components/ui/timeline';
 import './Projects.css';
 
 const ProjectCard = ({ project, index }) => {
