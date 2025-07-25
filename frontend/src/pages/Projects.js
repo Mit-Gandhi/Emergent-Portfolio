@@ -86,25 +86,25 @@ const Projects = () => {
       ),
     },
     {
-      title: "AI Medical Diagnosis",
+      title: "Brain Tumor Detection",
       content: (
         <div className="timeline-project">
           <div className="timeline-project-header">
             <img 
               src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" 
-              alt="AI Medical Diagnosis System"
+              alt="Brain Tumor Detection System"
               className="timeline-project-image"
             />
           </div>
           <div className="timeline-project-content">
-            <h4 className="timeline-project-title">AI-Powered Medical Diagnosis System</h4>
+            <h4 className="timeline-project-title">Brain Tumor Detection System</h4>
             <p className="timeline-project-description">
-              A deep learning system that analyzes medical images to assist doctors in diagnosing diseases. 
-              Uses computer vision and neural networks to identify anomalies in X-rays, CT scans, and MRIs with high accuracy.
+              An advanced deep learning system for automated brain tumor detection and classification using medical imaging data. 
+              Utilizes state-of-the-art computer vision techniques with YOLOv11 and convolutional neural networks to analyze MRI and CT scans with high precision.
             </p>
             
             <div className="timeline-project-tech">
-              {["Deep Learning", "Computer Vision", "Python", "TensorFlow", "OpenCV"].map((tech, index) => (
+              {["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"].map((tech, index) => (
                 <span key={index} className="timeline-tech-tag">
                   {getTechIcon(tech)}
                   {tech}
@@ -115,17 +115,18 @@ const Projects = () => {
             <div className="timeline-project-features">
               <h5>Key Features:</h5>
               <ul>
-                <li>Multi-class disease classification</li>
-                <li>Real-time image processing</li>
-                <li>95% accuracy on validation set</li>
-                <li>Web-based interface for doctors</li>
-                <li>Integration with hospital systems</li>
+                <li>Automated tumor detection and classification</li>
+                <li>High-precision medical image analysis</li>
+                <li>Multi-class brain tumor identification</li>
+                <li>Real-time processing of MRI/CT scans</li>
+                <li>DICOM format compatibility</li>
+                <li>Clinical-grade accuracy metrics</li>
               </ul>
             </div>
 
             <div className="timeline-project-links">
               <motion.a
-                href="https://github.com/Mit-Gandhi/medical-diagnosis-ai"
+                href="https://github.com/Mit-Gandhi/Brain-Tumor-Detection"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="timeline-project-link"
@@ -134,17 +135,6 @@ const Projects = () => {
               >
                 <Github size={18} />
                 GitHub Repository
-              </motion.a>
-              <motion.a
-                href="https://medical-ai-demo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link demo"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ExternalLink size={18} />
-                Live Demo
               </motion.a>
             </div>
           </div>
