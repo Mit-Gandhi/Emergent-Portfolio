@@ -452,4 +452,31 @@
   .projects-footer p {
     font-size: 1rem;
   }
+
+  /* Timeline small mobile styles */
+  .timeline-project-header {
+    height: 160px;
+  }
+  
+  .timeline-project-title {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-project-description {
+    font-size: 0.85rem;
+  }
+  
+  .timeline-tech-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .timeline-project-features li {
+    font-size: 0.8rem;
+  }
+  
+  .timeline-project-link {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
 }
