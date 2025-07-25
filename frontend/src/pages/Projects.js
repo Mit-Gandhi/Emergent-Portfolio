@@ -90,94 +90,235 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const Projects = () => {
+  const getTechIcon = (tech) => {
+    switch (tech.toLowerCase()) {
+      case 'machine learning':
+      case 'ml':
+        return <Brain size={16} />;
+      case 'deep learning':
+      case 'dl':
+        return <Zap size={16} />;
+      case 'computer vision':
+      case 'cv':
+        return <Eye size={16} />;
+      case 'nlp':
+      case 'natural language processing':
+        return <MessageSquare size={16} />;
+      case 'database':
+      case 'mongodb':
+      case 'sql':
+        return <Database size={16} />;
+      default:
+        return <Code size={16} />;
+    }
+  };
+
   const projects = [
     {
-      title: "AI-Powered Medical Diagnosis System",
-      description: "A deep learning system that analyzes medical images to assist doctors in diagnosing diseases. Uses computer vision and neural networks to identify anomalies in X-rays, CT scans, and MRIs with high accuracy.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-      github: "https://github.com/Mit-Gandhi/medical-diagnosis-ai",
-      demo: "https://medical-ai-demo.com",
-      technologies: ["Deep Learning", "Computer Vision", "Python", "TensorFlow", "OpenCV"],
-      features: [
-        "Multi-class disease classification",
-        "Real-time image processing",
-        "95% accuracy on validation set",
-        "Web-based interface for doctors",
-        "Integration with hospital systems"
-      ]
+      title: "AI Medical Diagnosis",
+      content: (
+        <div className="timeline-project">
+          <div className="timeline-project-header">
+            <img 
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" 
+              alt="AI Medical Diagnosis System"
+              className="timeline-project-image"
+            />
+          </div>
+          <div className="timeline-project-content">
+            <h4 className="timeline-project-title">AI-Powered Medical Diagnosis System</h4>
+            <p className="timeline-project-description">
+              A deep learning system that analyzes medical images to assist doctors in diagnosing diseases. 
+              Uses computer vision and neural networks to identify anomalies in X-rays, CT scans, and MRIs with high accuracy.
+            </p>
+            
+            <div className="timeline-project-tech">
+              {["Deep Learning", "Computer Vision", "Python", "TensorFlow", "OpenCV"].map((tech, index) => (
+                <span key={index} className="timeline-tech-tag">
+                  {getTechIcon(tech)}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="timeline-project-features">
+              <h5>Key Features:</h5>
+              <ul>
+                <li>Multi-class disease classification</li>
+                <li>Real-time image processing</li>
+                <li>95% accuracy on validation set</li>
+                <li>Web-based interface for doctors</li>
+                <li>Integration with hospital systems</li>
+              </ul>
+            </div>
+
+            <div className="timeline-project-links">
+              <motion.a
+                href="https://github.com/Mit-Gandhi/medical-diagnosis-ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github size={18} />
+                GitHub Repository
+              </motion.a>
+              <motion.a
+                href="https://medical-ai-demo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link demo"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ExternalLink size={18} />
+                Live Demo
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      ),
     },
     {
-      title: "Smart Customer Support Chatbot",
-      description: "An intelligent chatbot powered by NLP and machine learning that provides 24/7 customer support. Understands customer queries, provides relevant answers, and escalates complex issues to human agents.",
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop",
-      github: "https://github.com/Mit-Gandhi/smart-chatbot",
-      technologies: ["NLP", "Machine Learning", "Python", "BERT", "Flask", "MongoDB"],
-      features: [
-        "Intent recognition and entity extraction",
-        "Multi-language support",
-        "Sentiment analysis",
-        "Conversation history tracking",
-        "Analytics dashboard for insights"
-      ]
+      title: "Smart Chatbot",
+      content: (
+        <div className="timeline-project">
+          <div className="timeline-project-header">
+            <img 
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
+              alt="Smart Customer Support Chatbot"
+              className="timeline-project-image"
+            />
+          </div>
+          <div className="timeline-project-content">
+            <h4 className="timeline-project-title">Smart Customer Support Chatbot</h4>
+            <p className="timeline-project-description">
+              An intelligent chatbot powered by NLP and machine learning that provides 24/7 customer support. 
+              Understands customer queries, provides relevant answers, and escalates complex issues to human agents.
+            </p>
+            
+            <div className="timeline-project-tech">
+              {["NLP", "Machine Learning", "Python", "BERT", "Flask", "MongoDB"].map((tech, index) => (
+                <span key={index} className="timeline-tech-tag">
+                  {getTechIcon(tech)}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="timeline-project-features">
+              <h5>Key Features:</h5>
+              <ul>
+                <li>Intent recognition and entity extraction</li>
+                <li>Multi-language support</li>
+                <li>Sentiment analysis</li>
+                <li>Conversation history tracking</li>
+                <li>Analytics dashboard for insights</li>
+              </ul>
+            </div>
+
+            <div className="timeline-project-links">
+              <motion.a
+                href="https://github.com/Mit-Gandhi/smart-chatbot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github size={18} />
+                GitHub Repository
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      ),
     },
     {
-      title: "Predictive Sales Analytics Platform",
-      description: "A comprehensive analytics platform that uses machine learning to predict sales trends, customer behavior, and market dynamics. Helps businesses make data-driven decisions and optimize their sales strategies.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      github: "https://github.com/Mit-Gandhi/sales-analytics-ml",
-      technologies: ["Machine Learning", "Python", "Scikit-learn", "React", "Database"],
-      features: [
-        "Sales forecasting with 92% accuracy",
-        "Customer segmentation analysis",
-        "Real-time dashboard with visualizations",
-        "Automated report generation",
-        "A/B testing framework"
-      ]
-    }
+      title: "Sales Analytics",
+      content: (
+        <div className="timeline-project">
+          <div className="timeline-project-header">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+              alt="Predictive Sales Analytics Platform"
+              className="timeline-project-image"
+            />
+          </div>
+          <div className="timeline-project-content">
+            <h4 className="timeline-project-title">Predictive Sales Analytics Platform</h4>
+            <p className="timeline-project-description">
+              A comprehensive analytics platform that uses machine learning to predict sales trends, customer behavior, 
+              and market dynamics. Helps businesses make data-driven decisions and optimize their sales strategies.
+            </p>
+            
+            <div className="timeline-project-tech">
+              {["Machine Learning", "Python", "Scikit-learn", "React", "Database"].map((tech, index) => (
+                <span key={index} className="timeline-tech-tag">
+                  {getTechIcon(tech)}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="timeline-project-features">
+              <h5>Key Features:</h5>
+              <ul>
+                <li>Sales forecasting with 92% accuracy</li>
+                <li>Customer segmentation analysis</li>
+                <li>Real-time dashboard with visualizations</li>
+                <li>Automated report generation</li>
+                <li>A/B testing framework</li>
+              </ul>
+            </div>
+
+            <div className="timeline-project-links">
+              <motion.a
+                href="https://github.com/Mit-Gandhi/sales-analytics-ml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github size={18} />
+                GitHub Repository
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      ),
+    },
   ];
 
   return (
-    <div className="projects-page">
+    <div className="projects-page-timeline">
       <Navigation />
-      
-      <div className="projects-content">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="projects-header"
-        >
-          <h1 className="page-title">My Projects</h1>
-          <p className="page-subtitle">Showcasing innovative AI/ML solutions that solve real-world problems</p>
-        </motion.div>
-
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="projects-footer"
-        >
-          <h2>Want to see more?</h2>
-          <p>Check out my GitHub profile for more projects and contributions</p>
-          <motion.a
-            href="https://github.com/Mit-Gandhi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Github size={20} />
-            Visit My GitHub
-          </motion.a>
-        </motion.div>
+      <div className="timeline-wrapper">
+        <Timeline data={projects} />
       </div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="projects-footer"
+      >
+        <h2>Want to see more?</h2>
+        <p>Check out my GitHub profile for more projects and contributions</p>
+        <motion.a
+          href="https://github.com/Mit-Gandhi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Github size={20} />
+          Visit My GitHub
+        </motion.a>
+      </motion.div>
     </div>
   );
 };
