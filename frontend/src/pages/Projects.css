@@ -167,6 +167,11 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
 }
 
+.timeline-project-link.demo:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
 .projects-content {
   padding: 8rem 2rem 4rem;
   max-width: 1200px;
