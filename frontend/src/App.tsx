@@ -24,8 +24,8 @@ function AppContent() {
       // Small delay before showing content for smooth transition
       setTimeout(() => {
         setShowContent(true);
-      }, 100);
-    }, 400); // Show loading for 0.4 seconds
+      }, 50);
+    }, 150); // Show loading for 0.15 seconds
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
