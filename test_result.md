@@ -397,6 +397,36 @@
         agent: "main"
         comment: "Successfully implemented all improvements! 1) Fixed loading screen behavior - now only loading screen appears during 1.5s transitions with no page content behind, then smooth transition to new page 2) Made robot static by removing all motion animations and glow effects, increased size to 600px max width/height 3) Removed all background styling, borders, and hover effects from robot 4) Added website icon (/images/icon.png) to HTML head with proper favicon and apple-touch-icon 5) Updated page title and meta description for better SEO"
 
+  - task: "Add minimal click effects to cursor and buttons"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/CustomCursor.js, /app/frontend/src/index.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to add minimal click effects in cursor and buttons on which user clicks"
+      - working: true
+        agent: "main"
+        comment: "Successfully implemented click effects! 1) Enhanced CustomCursor with click state detection and animations 2) Added cursor scale-down and color changes on click 3) Added button click effects with scale and brightness changes 4) Enhanced hover effects for better user interaction feedback"
+
+  - task: "Implement timeline scrolling animation for projects section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/ui/timeline.tsx, /app/frontend/src/pages/Projects.js, /app/frontend/src/pages/Projects.css"
+    stuck_count: 0
+    priority: "high" 
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - need to add timeline scrolling animation in projects section with project descriptions and GitHub links on right side"
+      - working: true
+        agent: "main"
+        comment: "Successfully implemented timeline animation! 1) Created Timeline component in /components/ui/ with shadcn structure 2) Replaced static projects grid with scrolling timeline 3) Integrated framer-motion for smooth scroll-based animations 4) Projects display on right side with descriptions and GitHub links 5) Added responsive design for all screen sizes 6) Applied green theme styling matching website design"
+
 ## backend:
   - task: "No backend changes required"
     implemented: true
