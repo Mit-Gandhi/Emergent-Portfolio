@@ -31,6 +31,61 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "CrimeVision AI",
+      content: (
+        <div className="timeline-project">
+          <div className="timeline-project-header">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+              alt="CrimeVision AI"
+              className="timeline-project-image"
+            />
+          </div>
+          <div className="timeline-project-content">
+            <h4 className="timeline-project-title">CrimeVision AI</h4>
+            <p className="timeline-project-description">
+              An innovative AI-driven criminal detection system developed during HackWithGujarat. 
+              Utilizes computer vision and machine learning algorithms to identify and track suspicious activities in real-time surveillance footage.
+            </p>
+            
+            <div className="timeline-project-tech">
+              {["Computer Vision", "Machine Learning", "Python", "OpenCV", "Deep Learning"].map((tech, index) => (
+                <span key={index} className="timeline-tech-tag">
+                  {getTechIcon(tech)}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="timeline-project-features">
+              <h5>Key Features:</h5>
+              <ul>
+                <li>Real-time criminal detection in surveillance footage</li>
+                <li>Advanced facial recognition and matching</li>
+                <li>Suspicious activity pattern recognition</li>
+                <li>Automated alert system for law enforcement</li>
+                <li>High accuracy detection algorithms</li>
+              </ul>
+            </div>
+
+            <div className="timeline-project-links">
+              <motion.a
+                href="https://github.com/Mit-Gandhi/Hack_with_gujarat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github size={18} />
+                GitHub Repository
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "AI Medical Diagnosis",
       content: (
         <div className="timeline-project">
