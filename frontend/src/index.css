@@ -67,9 +67,27 @@ code {
     box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
 }
 
+.custom-cursor.clicking {
+    transform: scale(0.8);
+    background: linear-gradient(135deg, #047857 0%, #059669 100%);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 1);
+    transition: all 0.05s ease;
+}
+
+.custom-cursor.hover.clicking {
+    transform: scale(1.2);
+}
+
 .custom-cursor-trail.hover {
     transform: scale(1.2);
     border-color: rgba(16, 185, 129, 0.5);
+}
+
+.custom-cursor-trail.clicking {
+    transform: scale(0.8);
+    border-color: rgba(16, 185, 129, 0.8);
+    border-width: 3px;
+    transition: all 0.05s ease;
 }
 
 /* Remove click effects */
