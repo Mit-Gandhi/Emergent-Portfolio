@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
   const cursorRef = useRef(null);
   const trailRef = useRef(null);
 
