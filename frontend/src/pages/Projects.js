@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="timeline-project">
           <div className="timeline-project-header">
             <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+              src="https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?w=600&h=400&fit=crop" 
               alt="CrimeVision AI"
               className="timeline-project-image"
             />
@@ -49,7 +49,7 @@ const Projects = () => {
             </p>
             
             <div className="timeline-project-tech">
-              {["Computer Vision", "Machine Learning", "Python", "OpenCV", "Deep Learning"].map((tech, index) => (
+              {["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"].map((tech, index) => (
                 <span key={index} className="timeline-tech-tag">
                   {getTechIcon(tech)}
                   {tech}
