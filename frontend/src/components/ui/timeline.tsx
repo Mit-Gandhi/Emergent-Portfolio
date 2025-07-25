@@ -34,7 +34,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full font-sans md:px-10"
+      className="w-full font-sans md:px-10 overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)' }}
       ref={containerRef}
     >
