@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const StaticRobotImage = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
   return (
     <div className="robot-image-wrapper">
       <img 
