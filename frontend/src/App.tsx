@@ -15,6 +15,19 @@ function AppContent() {
   const [showContent, setShowContent] = useState(true);
   const location = useLocation();
 
+  // Initialize image optimization on app start
+  useEffect(() => {
+    // Preload critical images
+    preloadImages(CRITICAL_IMAGES);
+    
+    // Initialize lazy loading observer
+    const timer = setTimeout(() => {
+      initImageObserver();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     // Start loading transition
     setLoading(true);
@@ -25,8 +38,12 @@ function AppContent() {
       // Small delay before showing content for smooth transition
       setTimeout(() => {
         setShowContent(true);
-      }, 100);
-    }, 1000); // Show loading for 0.15 seconds
+        // Re-initialize image observer for new page content
+        setTimeout(() => {
+          initImageObserver();
+        }, 100);
+      }, 50);
+    }, 150); // Show loading for 0.15 seconds
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
