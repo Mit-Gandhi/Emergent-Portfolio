@@ -194,7 +194,7 @@ const Projects = () => {
               src="/images/skillxchange.jpg" 
               alt="SkillXChange - Peer-to-Peer Learning Platform"
               className="timeline-project-image"
-              loading="lazy"
+              loading="eager"
               decoding="async"
               onError={(e) => {
                 e.target.src = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop';
