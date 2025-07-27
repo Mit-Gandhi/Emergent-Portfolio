@@ -66,14 +66,17 @@ export const preloadImages = async (sources) => {
   }
 };
 
-// Critical images list
+// Critical images list (all need to load immediately)
 export const CRITICAL_IMAGES = [
   '/images/robot.png',
   '/images/mit.jpg',
-  '/images/icon.png'
+  '/images/icon.png',
+  '/images/banner1.jpg',
+  '/images/skillxchange.jpg',
+  'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80'
 ];
 
-// Project images list (for prefetching)
+// Legacy project images list (now part of critical)
 export const PROJECT_IMAGES = [
   '/images/banner1.jpg',
   '/images/skillxchange.jpg'
