@@ -505,20 +505,20 @@
         agent: "main"
         comment: "Successfully added CrimeVision AI project! 1) Added as first project in timeline 2) Included comprehensive description of AI-driven criminal detection system 3) Added appropriate tech tags (Computer Vision, Machine Learning, Python, OpenCV, Deep Learning) 4) Listed key features including real-time detection and facial recognition 5) Only included GitHub repository link as requested, no live demo button"
 
-  - task: "Fix projects page initial content visibility issue"
+  - task: "Add rounded corners to robot image and implement comprehensive content protection"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/ui/timeline.tsx, /app/frontend/src/pages/Projects.css, /app/frontend/src/App.tsx, /app/frontend/src/pages/About.css"
+    file: "/app/frontend/src/components/MorphingSphere.js, /app/frontend/src/components/MorphingSphere.css, /app/frontend/src/components/ContentProtection.js, /app/frontend/src/App.tsx, /app/frontend/src/index.css"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
-        comment: "User reported blank screen issue on Projects and About pages - content not visible on initial page load, only after scrolling"
+        comment: "Task identified - need to add rounded corners to robot image and implement content protection to prevent copying"
       - working: true
         agent: "main"
-        comment: "Successfully fixed blank screen issues on both pages! Fixed: 1) Reduced loading screen delay from 500ms to 200ms total (150ms loading + 50ms transition) 2) Fixed Projects page: Reduced timeline-wrapper padding from 8rem to 6rem, reduced timeline-header padding from 4rem to 2rem, reduced first timeline item padding from 160px to 64px 3) Fixed About page: Reduced content padding from 8rem to 6rem, reduced header margin from 4rem to 2rem 4) Content now appears immediately on page load for both About and Projects pages"
+        comment: "Successfully implemented both requirements! 1) Robot Image Rounded Corners - Added 'robot-image' CSS class and inline borderRadius: '20px' to robot image, creating smooth rounded corners 2) Comprehensive Content Protection - Created ContentProtection component with JavaScript-based protections, added global CSS protection rules to prevent text selection, right-click, image dragging, keyboard shortcuts (Ctrl+C, Ctrl+A, F12, etc.), disabled console and developer tools detection, added image-specific protection handlers, implemented protective overlays. All content is now protected from copying while maintaining full website functionality."
 
 ## backend:
   - task: "No backend changes required"
