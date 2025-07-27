@@ -27,6 +27,19 @@
   height: auto;
 }
 
+/* Add protective overlay to robot image */
+.robot-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: transparent;
+}
+
 .robot-image {
   width: 100%;
   height: auto;
@@ -35,6 +48,8 @@
   object-fit: contain;
   display: block;
   border-radius: 20px;
+  position: relative;
+  z-index: 0;
 }
 
 /* Welcome Message Above Robot */
