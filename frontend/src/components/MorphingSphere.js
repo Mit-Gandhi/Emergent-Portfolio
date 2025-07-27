@@ -18,13 +18,22 @@ const StaticRobotImage = () => {
           console.log('Robot image failed to load, using fallback');
           e.target.src = 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=600&fit=crop';
         }}
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+        onSelectStart={(e) => e.preventDefault()}
+        onMouseDown={(e) => e.preventDefault()}
         style={{
           width: '100%',
           height: '100%',
           objectFit: 'contain',
           transition: 'opacity 0.3s ease',
           opacity: imageLoaded ? 1 : 0.7,
-          borderRadius: '20px'
+          borderRadius: '20px',
+          pointerEvents: 'none',
+          userSelect: 'none',
+          webkitUserSelect: 'none',
+          mozUserSelect: 'none',
+          msUserSelect: 'none'
         }}
       />
     </div>
