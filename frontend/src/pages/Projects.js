@@ -209,61 +209,6 @@ const Projects = () => {
         </div>
       ),
     },
-    {
-      title: "Sales Analytics",
-      content: (
-        <div className="timeline-project">
-          <div className="timeline-project-header">
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
-              alt="Predictive Sales Analytics Platform"
-              className="timeline-project-image"
-            />
-          </div>
-          <div className="timeline-project-content">
-            <h4 className="timeline-project-title">Predictive Sales Analytics Platform</h4>
-            <p className="timeline-project-description">
-              A comprehensive analytics platform that uses machine learning to predict sales trends, customer behavior, 
-              and market dynamics. Helps businesses make data-driven decisions and optimize their sales strategies.
-            </p>
-            
-            <div className="timeline-project-tech">
-              {["Machine Learning", "Python", "Scikit-learn", "React", "Database"].map((tech, index) => (
-                <span key={index} className="timeline-tech-tag">
-                  {getTechIcon(tech)}
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="timeline-project-features">
-              <h5>Key Features:</h5>
-              <ul>
-                <li>Sales forecasting with 92% accuracy</li>
-                <li>Customer segmentation analysis</li>
-                <li>Real-time dashboard with visualizations</li>
-                <li>Automated report generation</li>
-                <li>A/B testing framework</li>
-              </ul>
-            </div>
-
-            <div className="timeline-project-links">
-              <motion.a
-                href="https://github.com/Mit-Gandhi/sales-analytics-ml"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Github size={18} />
-                GitHub Repository
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      ),
-    },
   ];
 
   return (
