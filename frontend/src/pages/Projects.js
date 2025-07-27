@@ -132,7 +132,7 @@ const Projects = () => {
               src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80" 
               alt="Brain Tumor Detection - Medical AI System"
               className="timeline-project-image"
-              loading="lazy"
+              loading="eager"
               decoding="async"
               onError={(e) => {
                 e.target.src = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop';
