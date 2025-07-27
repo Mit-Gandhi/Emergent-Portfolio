@@ -43,7 +43,7 @@ function AppContent() {
           initImageObserver();
         }, 100);
       }, 50);
-    }, 150); // Show loading for 0.15 seconds
+    }, 1000); // Show loading for 0.15 seconds
 
     return () => clearTimeout(timer);
   }, [location.pathname]);

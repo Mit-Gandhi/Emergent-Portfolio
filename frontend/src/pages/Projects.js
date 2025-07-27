@@ -70,8 +70,9 @@ const Projects = () => {
               src="/images/banner1.jpg" 
               alt="CrimeVision AI - Criminal Detection System"
               className="timeline-project-image"
-              loading="lazy"
+              loading="eager"
               decoding="async"
+              fetchpriority="high"
               onError={(e) => {
                 e.target.src = 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop';
               }}
