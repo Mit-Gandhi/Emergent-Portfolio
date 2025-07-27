@@ -111,8 +111,14 @@ img[loading="lazy"].loaded {
 }
 
 /* Custom Cursor - Hide system cursor completely */
-* {
-    cursor: none;
+*,
+*::before,
+*::after {
+    cursor: none !important;
+}
+
+html {
+    cursor: none !important;
 }
 
 body {
@@ -129,13 +135,30 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+    cursor: none !important;
+}
+
+/* Hide cursor on all possible elements */
+a, button, input, textarea, select, option, label, 
+[role="button"], [tabindex], [onclick], [onmouseover],
+div, span, p, h1, h2, h3, h4, h5, h6, img, svg, canvas,
+ul, ol, li, table, tr, td, th, form, fieldset, legend {
+    cursor: none !important;
+}
+
+/* Ensure cursor is hidden on focus and hover states */
+*:hover,
+*:focus,
+*:active,
+*:visited {
+    cursor: none !important;
 }
 
 /* Inner Cursor - Small solid green circle with white dot */
 .cursor-inner {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -8px; /* Center the cursor */
+    left: -8px; /* Center the cursor */
     width: 16px;
     height: 16px;
     background: #10b981;
@@ -146,22 +169,34 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    mix-blend-mode: normal;
 }
 
 /* White dot inside inner cursor */
+.cursor-inner::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Alternative white dot class if using separate element */
 .cursor-white-dot {
     width: 4px;
     height: 4px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
+    pointer-events: none;
 }
 
 /* Outer Ring - Semi-transparent with smooth trailing */
 .cursor-outer-ring {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -20px; /* Center the ring */
+    left: -20px; /* Center the ring */
     width: 40px;
     height: 40px;
     border: 2px solid rgba(16, 185, 129, 0.3);
@@ -171,6 +206,7 @@ code {
     will-change: transform;
     background: rgba(16, 185, 129, 0.05);
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    transition: transform 0.15s ease-out, border-color 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
 }
 
 /* Hover effects */
@@ -190,7 +226,7 @@ code {
 .cursor-inner.clicking {
     transform: scale(0.8);
     background: #047857;
-    transition: transform 0.05s ease;
+    transition: transform 0.05s ease, background-color 0.05s ease;
 }
 
 .cursor-outer-ring.clicking {
@@ -204,10 +240,42 @@ code {
 /* Combined hover and click effects */
 .cursor-inner.hover.clicking {
     transform: scale(1.0);
+    background: #047857;
 }
 
 .cursor-outer-ring.hover.clicking {
     transform: scale(1.1);
+    border-color: rgba(16, 185, 129, 0.7);
+    border-width: 3px;
+    background: rgba(16, 185, 129, 0.15);
+}
+
+/* Ensure cursor appears above all content */
+.cursor-inner,
+.cursor-outer-ring {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Hide cursor on all interactive elements */
+a, button, input, textarea, select, label, [role="button"], [tabindex], [onclick] {
+    cursor: none !important;
+}
+
+/* Special states for text selection areas */
+.cursor-inner.text-hover {
+    transform: scale(0.8);
+    background: #10b981;
+    border-radius: 2px;
+    width: 2px;
+    height: 20px;
+}
+
+.cursor-outer-ring.text-hover {
+    opacity: 0.5;
+    transform: scale(0.8);
 }
 
 /* Remove click effects */
