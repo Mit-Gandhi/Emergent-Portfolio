@@ -24,19 +24,27 @@ const ContentProtection = () => {
       return false;
     };
 
-    // Disable keyboard shortcuts
+    // Disable keyboard shortcuts (but allow typing in form elements)
     const disableKeyboardShortcuts = (e) => {
-      // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+A, Ctrl+S, Ctrl+C, Ctrl+X, Ctrl+V, Ctrl+P
+      // Allow normal typing and navigation in form elements
+      if (e.target.tagName === 'INPUT' || 
+          e.target.tagName === 'TEXTAREA' || 
+          e.target.tagName === 'SELECT' ||
+          e.target.isContentEditable ||
+          e.target.closest('form')) {
+        // Allow Ctrl+A (select all), Ctrl+C (copy), Ctrl+V (paste), Ctrl+X (cut) in form elements
+        if ((e.ctrlKey && (e.keyCode === 65 || e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88))) {
+          return true;
+        }
+      }
+      
+      // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+P and other dev tools shortcuts
       if (
         e.keyCode === 123 || // F12
         (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
         (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
         (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
-        (e.ctrlKey && e.keyCode === 65) || // Ctrl+A
         (e.ctrlKey && e.keyCode === 83) || // Ctrl+S
-        (e.ctrlKey && e.keyCode === 67) || // Ctrl+C
-        (e.ctrlKey && e.keyCode === 88) || // Ctrl+X
-        (e.ctrlKey && e.keyCode === 86) || // Ctrl+V
         (e.ctrlKey && e.keyCode === 80) || // Ctrl+P
         (e.ctrlKey && e.shiftKey && e.keyCode === 67) || // Ctrl+Shift+C
         (e.ctrlKey && e.shiftKey && e.keyCode === 86) || // Ctrl+Shift+V
@@ -46,6 +54,18 @@ const ContentProtection = () => {
         e.preventDefault();
         e.stopPropagation();
         return false;
+      }
+      
+      // For non-form elements, disable Ctrl+A, Ctrl+C, Ctrl+X, Ctrl+V
+      if (!(e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT' || e.target.isContentEditable || e.target.closest('form'))) {
+        if ((e.ctrlKey && e.keyCode === 65) || // Ctrl+A
+            (e.ctrlKey && e.keyCode === 67) || // Ctrl+C
+            (e.ctrlKey && e.keyCode === 88) || // Ctrl+X
+            (e.ctrlKey && e.keyCode === 86)) { // Ctrl+V
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
       }
     };
 
