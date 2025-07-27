@@ -44,8 +44,14 @@ const About = () => {
               <div className="profile-image">
                 <img 
                   src="/images/mit.jpg" 
-                  alt="Mit Gandhi" 
+                  alt="Mit Gandhi - AI/ML Engineer" 
                   className="profile-photo"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  onError={(e) => {
+                    e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop';
+                  }}
                 />
               </div>
               <div className="profile-info">
