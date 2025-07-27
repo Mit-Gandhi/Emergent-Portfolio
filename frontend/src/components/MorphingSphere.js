@@ -6,11 +6,21 @@ const StaticRobotImage = () => {
     <div className="robot-image-wrapper">
       <img 
         src="/images/robot.png"
-        alt="Cute Robot with Purple/Blue Glowing Head" 
-        className="robot-image"
+        alt="AI Robot Assistant"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        onLoad={() => setImageLoaded(true)}
         onError={(e) => {
-          // Fallback to Unsplash image if robot.png is not found
-          e.target.src = "https://images.unsplash.com/photo-1657641898365-48ae7d64e676?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3";
+          console.log('Robot image failed to load, using fallback');
+          e.target.src = 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=600&fit=crop';
+        }}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+          transition: 'opacity 0.3s ease',
+          opacity: imageLoaded ? 1 : 0.7
         }}
       />
     </div>
