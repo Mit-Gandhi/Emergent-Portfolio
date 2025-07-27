@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Portfolio Website - Frontend Only
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React, featuring:
 
-## Available Scripts
+- ✨ Custom cursor with smooth trailing animation
+- 🎨 Beautiful UI with green theme
+- 🛡️ Content protection (prevents copying)
+- 📱 Fully responsive design
+- 🖼️ Image optimization
+- ⚡ Smooth animations with Framer Motion
+- 🎯 Interactive timeline for projects
+- 📧 Email contact form (EmailJS)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 🎯 Custom Cursor
+- Small solid green circle with white center dot
+- Larger semi-transparent trailing ring
+- Smooth animation using requestAnimationFrame and lerping
+- Responsive hover and click effects
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🛡️ Content Protection
+- Silent prevention of text selection
+- Disabled right-click context menu
+- Blocked keyboard shortcuts (Ctrl+C, Ctrl+A, F12, etc.)
+- Image drag protection
+- Developer tools detection
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🎨 Modern Design
+- Clean, professional layout
+- Green color scheme (#10b981)
+- Smooth page transitions
+- Loading animations
+- Custom scrollbar
 
-### `npm test`
+## Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (v16 or higher)
+- Yarn package manager
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone or download the project**
+2. **Navigate to the frontend directory**
+3. **Install dependencies**
+4. **Add your images**
+5. **Start the development server**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See detailed instructions below.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- **React 19** - UI Framework
+- **Framer Motion** - Animations
+- **React Router** - Navigation
+- **EmailJS** - Contact form
+- **Tailwind CSS** - Styling
+- **TypeScript** - Type safety
+- **Lucide React** - Icons
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+frontend/
+├── public/
+│   ├── images/           # Your images go here
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/       # Reuseable components
+│   ├── pages/           # Page components
+│   ├── utils/           # Utility functions
+│   └── ...
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Customization
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Adding Your Images
+Place these files in `public/images/`:
+- `robot.png` - Robot image for homepage
+- `mit.jpg` - Your profile photo
+- `icon.png` - Website favicon
+- `banner1.jpg` - Project banner
 
-## Learn More
+### Updating Content
+- **Personal Info**: Edit `src/pages/About.js`
+- **Projects**: Edit `src/pages/Projects.js`
+- **Contact**: Update EmailJS config in `src/pages/Contact.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Color Theme
+The website uses a green theme. To change colors, update CSS variables in `src/index.css`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+### Build for Production
+```bash
+yarn build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Deploy Options
+- **Netlify**: Drag and drop the `build` folder
+- **Vercel**: Connect your Git repository
+- **GitHub Pages**: Use `gh-pages` package
+- **AWS S3**: Upload the `build` folder
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for personal portfolio use.
