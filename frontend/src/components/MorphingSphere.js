@@ -9,6 +9,7 @@ const StaticRobotImage = () => {
       <img 
         src="/images/robot.png"
         alt="AI Robot Assistant"
+        className="robot-image"
         loading="eager"
         decoding="async"
         fetchpriority="high"
@@ -22,7 +23,8 @@ const StaticRobotImage = () => {
           height: '100%',
           objectFit: 'contain',
           transition: 'opacity 0.3s ease',
-          opacity: imageLoaded ? 1 : 0.7
+          opacity: imageLoaded ? 1 : 0.7,
+          borderRadius: '20px'
         }}
       />
     </div>
