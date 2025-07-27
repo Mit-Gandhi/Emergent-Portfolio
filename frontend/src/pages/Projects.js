@@ -161,7 +161,7 @@ const Projects = () => {
             </p>
             
             <div className="timeline-project-tech">
-              {["React", "Node.js", "MongoDB", "Express", "JWT", "Socket.io", "Material-UI", "REST API"].map((tech, index) => (
+              {["React", "Vite.js", "Firebase Firestore", "Tailwind CSS", "Firebase Auth"].map((tech, index) => (
                 <span key={index} className="timeline-tech-tag">
                   {getTechIcon(tech)}
                   {tech}
