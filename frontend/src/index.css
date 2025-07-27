@@ -9,22 +9,28 @@ img {
   display: block;
 }
 
-/* Smooth image loading animations */
+/* Immediate loading for eager images */
+img[loading="eager"] {
+  opacity: 1;
+}
+
+/* Smooth image loading animations only for lazy images */
 img[loading="lazy"] {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-img[loading="lazy"].loaded,
-img[loading="eager"] {
+img[loading="lazy"].loaded {
   opacity: 1;
 }
 
-/* Timeline project images optimization */
+/* Timeline project images optimization - ensure immediate visibility */
 .timeline-project-image {
   will-change: transform;
   backface-visibility: hidden;
   transform: translateZ(0);
+  opacity: 1;
+  transition: transform 0.3s ease;
 }
 
 /* Profile photo optimization */
