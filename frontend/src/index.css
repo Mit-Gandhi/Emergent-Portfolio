@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Image Optimization Styles */
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Smooth image loading animations */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded,
+img[loading="eager"] {
+  opacity: 1;
+}
+
+/* Timeline project images optimization */
+.timeline-project-image {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Profile photo optimization */
+.profile-photo {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Robot image optimization */
+.robot-image-wrapper img {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
 /* Custom Cursor */
 * {
     cursor: none !important;
