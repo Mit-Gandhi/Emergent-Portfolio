@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
+import { initImageObserver, preloadImages, CRITICAL_IMAGES } from './utils/imageOptimization';
 import './App.css';
 
 function AppContent() {
