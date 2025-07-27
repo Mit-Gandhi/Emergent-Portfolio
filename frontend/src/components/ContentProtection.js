@@ -9,8 +9,16 @@ const ContentProtection = () => {
       return false;
     };
 
-    // Disable text selection
+    // Disable text selection (but allow for form elements)
     const disableSelection = (e) => {
+      // Allow selection in form elements
+      if (e.target.tagName === 'INPUT' || 
+          e.target.tagName === 'TEXTAREA' || 
+          e.target.tagName === 'SELECT' ||
+          e.target.isContentEditable ||
+          e.target.closest('form')) {
+        return true;
+      }
       e.preventDefault();
       e.stopPropagation();
       return false;
