@@ -51,6 +51,7 @@ function AppContent() {
 
   return (
     <>
+      <ContentProtection />
       <CustomCursor />
       
       {/* Loading Screen - Only visible during loading */}
