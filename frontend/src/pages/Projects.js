@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code, Database, Eye, MessageSquare, Brain, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -6,6 +6,37 @@ import { Timeline } from '../components/ui/timeline';
 import './Projects.css';
 
 const Projects = () => {
+  // Prevent only horizontal scrollbar, keep vertical scrollbar
+  useEffect(() => {
+    // Only prevent horizontal overflow, maintain vertical scrolling
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.overflowY = 'auto';
+    document.body.style.overflowY = 'auto';
+    document.documentElement.style.maxWidth = '100vw';
+    document.body.style.maxWidth = '100vw';
+    document.documentElement.style.width = '100%';
+    document.body.style.width = '100%';
+    
+    // Prevent any temporary layout shifts that cause horizontal overflow
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    
+    // Clean up on unmount
+    return () => {
+      document.documentElement.style.overflowX = '';
+      document.body.style.overflowX = '';
+      document.documentElement.style.overflowY = '';
+      document.body.style.overflowY = '';
+      document.documentElement.style.maxWidth = '';
+      document.body.style.maxWidth = '';
+      document.documentElement.style.width = '';
+      document.body.style.width = '';
+      document.body.style.margin = '';
+      document.body.style.padding = '';
+    };
+  }, []);
+
   const getTechIcon = (tech) => {
     switch (tech.toLowerCase()) {
       case 'machine learning':
@@ -39,6 +70,7 @@ const Projects = () => {
               src="/images/banner1.jpg" 
               alt="CrimeVision AI"
               className="timeline-project-image"
+              loading="lazy"
             />
           </div>
           <div className="timeline-project-content">
@@ -76,6 +108,7 @@ const Projects = () => {
                 className="timeline-project-link"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Github size={18} />
                 GitHub Repository
@@ -94,6 +127,7 @@ const Projects = () => {
               src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" 
               alt="Brain Tumor Detection System"
               className="timeline-project-image"
+              loading="lazy"
             />
           </div>
           <div className="timeline-project-content">
@@ -132,6 +166,7 @@ const Projects = () => {
                 className="timeline-project-link"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Github size={18} />
                 GitHub Repository
@@ -150,6 +185,7 @@ const Projects = () => {
               src="/images/skillxchange.jpg" 
               alt="SkillXChange Platform"
               className="timeline-project-image"
+              loading="lazy"
             />
           </div>
           <div className="timeline-project-content">
@@ -189,6 +225,7 @@ const Projects = () => {
                 className="timeline-project-link"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Github size={18} />
                 GitHub Repository
@@ -200,6 +237,7 @@ const Projects = () => {
                 className="timeline-project-link demo"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <ExternalLink size={18} />
                 Live Demo
@@ -219,9 +257,15 @@ const Projects = () => {
       </div>
       
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        transition={{ 
+          duration: 0.6, 
+          delay: 0.3, 
+          type: "spring", 
+          stiffness: 100, 
+          damping: 15 
+        }}
         className="projects-footer"
       >
         <h2>Want to see more?</h2>
@@ -233,6 +277,7 @@ const Projects = () => {
           className="github-link"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
           <Github size={20} />
           Visit My GitHub
