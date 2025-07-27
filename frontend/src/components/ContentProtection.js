@@ -214,7 +214,17 @@ const ContentProtection = () => {
         clearInterval(clipboardInterval);
         document.removeEventListener('contextmenu', disableRightClick);
         document.removeEventListener('selectstart', disableSelection);
-        document.removeEventListener('mousedown', disableSelection);
+        // Remove the custom mousedown listeners
+        document.removeEventListener('mousedown', (e) => {
+          if (e.target.tagName === 'INPUT' || 
+              e.target.tagName === 'TEXTAREA' || 
+              e.target.tagName === 'SELECT' ||
+              e.target.tagName === 'BUTTON' ||
+              e.target.closest('form')) {
+            return true;
+          }
+          return disableSelection(e);
+        });
         document.removeEventListener('keydown', disableKeyboardShortcuts);
         document.removeEventListener('keyup', disableKeyboardShortcuts);
         document.removeEventListener('dragstart', disableDragDrop);
