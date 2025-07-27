@@ -68,9 +68,13 @@ const Projects = () => {
           <div className="timeline-project-header">
             <img 
               src="/images/banner1.jpg" 
-              alt="CrimeVision AI"
+              alt="CrimeVision AI - Criminal Detection System"
               className="timeline-project-image"
               loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                e.target.src = 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop';
+              }}
             />
           </div>
           <div className="timeline-project-content">
