@@ -180,7 +180,18 @@ const ContentProtection = () => {
     // Add all event listeners
     addListener(document, 'contextmenu', disableRightClick);
     addListener(document, 'selectstart', disableSelection);
-    addListener(document, 'mousedown', disableSelection);
+    // Only add mousedown listener for non-form elements to avoid interfering with input focus
+    addListener(document, 'mousedown', (e) => {
+      // Don't interfere with form elements
+      if (e.target.tagName === 'INPUT' || 
+          e.target.tagName === 'TEXTAREA' || 
+          e.target.tagName === 'SELECT' ||
+          e.target.tagName === 'BUTTON' ||
+          e.target.closest('form')) {
+        return true;
+      }
+      return disableSelection(e);
+    });
     addListener(document, 'keydown', disableKeyboardShortcuts);
     addListener(document, 'keyup', disableKeyboardShortcuts);
     addListener(document, 'dragstart', disableDragDrop);
