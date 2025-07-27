@@ -112,7 +112,7 @@ img[loading="lazy"].loaded {
 
 /* Custom Cursor - Hide system cursor completely */
 * {
-    cursor: none !important;
+    cursor: none;
 }
 
 body {
