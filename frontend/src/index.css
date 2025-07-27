@@ -110,7 +110,7 @@ img[loading="lazy"].loaded {
   transform: translateZ(0);
 }
 
-/* Custom Cursor */
+/* Custom Cursor - Hide system cursor completely */
 * {
     cursor: none !important;
 }
@@ -131,34 +131,34 @@ code {
         monospace;
 }
 
-.custom-cursor {
+/* Inner Cursor - Small solid green circle with white dot */
+.cursor-inner {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    width: 16px;
+    height: 16px;
+    background: #10b981;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+    z-index: 10001;
     will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
 }
 
-.custom-cursor::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
+/* White dot inside inner cursor */
+.cursor-white-dot {
+    width: 4px;
+    height: 4px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.custom-cursor-trail {
+/* Outer Ring - Semi-transparent with smooth trailing */
+.cursor-outer-ring {
     position: fixed;
     top: 0;
     left: 0;
@@ -167,38 +167,47 @@ code {
     border: 2px solid rgba(16, 185, 129, 0.3);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9998;
-    transition: all 0.2s ease;
+    z-index: 10000;
     will-change: transform;
+    background: rgba(16, 185, 129, 0.05);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
 }
 
-.custom-cursor.hover {
-    transform: scale(1.5);
-    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
-}
-
-.custom-cursor.clicking {
-    transform: scale(0.8);
-    background: linear-gradient(135deg, #047857 0%, #059669 100%);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 1);
-    transition: all 0.05s ease;
-}
-
-.custom-cursor.hover.clicking {
+/* Hover effects */
+.cursor-inner.hover {
     transform: scale(1.2);
+    background: #059669;
 }
 
-.custom-cursor-trail.hover {
-    transform: scale(1.2);
+.cursor-outer-ring.hover {
+    transform: scale(1.3);
     border-color: rgba(16, 185, 129, 0.5);
+    background: rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
 }
 
-.custom-cursor-trail.clicking {
+/* Click effects */
+.cursor-inner.clicking {
     transform: scale(0.8);
-    border-color: rgba(16, 185, 129, 0.8);
+    background: #047857;
+    transition: transform 0.05s ease;
+}
+
+.cursor-outer-ring.clicking {
+    transform: scale(0.9);
+    border-color: rgba(16, 185, 129, 0.7);
     border-width: 3px;
+    background: rgba(16, 185, 129, 0.15);
     transition: all 0.05s ease;
+}
+
+/* Combined hover and click effects */
+.cursor-inner.hover.clicking {
+    transform: scale(1.0);
+}
+
+.cursor-outer-ring.hover.clicking {
+    transform: scale(1.1);
 }
 
 /* Remove click effects */
