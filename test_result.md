@@ -103,7 +103,7 @@
 #====================================================================================================
 
 ## user_problem_statement: |
-  Portfolio website continuation: Replace the existing morphing sphere component with a Sketchfab embed iframe containing a 3D robot model and change the color of the component to match the website's green theme
+  Portfolio website continuation: Fix input field clicking issues on "Let's Connect" page and convert the entire project to frontend-only by removing all backend components and dependencies
 
 ## frontend:
   - task: "Replace morphing sphere with Sketchfab 3D robot"
