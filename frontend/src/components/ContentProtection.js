@@ -76,8 +76,17 @@ const ContentProtection = () => {
       return false;
     };
 
-    // Disable image dragging
+    // Disable image dragging (but allow form interactions)
     const disableImageDrag = (e) => {
+      // Allow normal mouse interactions on form elements
+      if (e.target.tagName === 'INPUT' || 
+          e.target.tagName === 'TEXTAREA' || 
+          e.target.tagName === 'SELECT' ||
+          e.target.tagName === 'BUTTON' ||
+          e.target.closest('form')) {
+        return true;
+      }
+      
       if (e.target.tagName === 'IMG') {
         e.preventDefault();
         e.stopPropagation();
