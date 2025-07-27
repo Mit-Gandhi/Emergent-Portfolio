@@ -2,6 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Content Protection Styles */
+* {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Disable text selection and highlighting */
+*::selection {
+  background: transparent !important;
+}
+
+*::-moz-selection {
+  background: transparent !important;
+}
+
+/* Disable image dragging and selection */
+img {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Disable context menu */
+body {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Prevent text cursor */
+p, h1, h2, h3, h4, h5, h6, span, div, a {
+  cursor: default !important;
+}
+
+/* Disable print styles */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* Re-enable interaction for buttons and form elements */
+button, input, textarea, select, a[href] {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
 /* Image Optimization Styles */
 img {
   height: auto;
