@@ -142,25 +142,26 @@ const Projects = () => {
       ),
     },
     {
-      title: "Smart Chatbot",
+      title: "SkillXChange",
       content: (
         <div className="timeline-project">
           <div className="timeline-project-header">
             <img 
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
-              alt="Smart Customer Support Chatbot"
+              src="/images/skillxchange.jpg" 
+              alt="SkillXChange Platform"
               className="timeline-project-image"
             />
           </div>
           <div className="timeline-project-content">
-            <h4 className="timeline-project-title">Smart Customer Support Chatbot</h4>
+            <h4 className="timeline-project-title">SkillXChange</h4>
             <p className="timeline-project-description">
-              An intelligent chatbot powered by NLP and machine learning that provides 24/7 customer support. 
-              Understands customer queries, provides relevant answers, and escalates complex issues to human agents.
+              A comprehensive skill exchange platform that connects individuals looking to learn new skills with those willing to teach. 
+              Built with modern web technologies, SkillXChange facilitates peer-to-peer learning by enabling users to offer their expertise 
+              in exchange for learning opportunities in other domains. The platform features user profiles, skill matching, and interactive learning sessions.
             </p>
             
             <div className="timeline-project-tech">
-              {["NLP", "Machine Learning", "Python", "BERT", "Flask", "MongoDB"].map((tech, index) => (
+              {["React", "Node.js", "MongoDB", "Express", "JWT", "Socket.io", "Material-UI", "REST API"].map((tech, index) => (
                 <span key={index} className="timeline-tech-tag">
                   {getTechIcon(tech)}
                   {tech}
@@ -171,17 +172,18 @@ const Projects = () => {
             <div className="timeline-project-features">
               <h5>Key Features:</h5>
               <ul>
-                <li>Intent recognition and entity extraction</li>
-                <li>Multi-language support</li>
-                <li>Sentiment analysis</li>
-                <li>Conversation history tracking</li>
-                <li>Analytics dashboard for insights</li>
+                <li>User authentication and profile management</li>
+                <li>Skill listing and matching algorithm</li>
+                <li>Real-time messaging and communication</li>
+                <li>Session scheduling and management</li>
+                <li>Rating and review system</li>
+                <li>Search and filter functionality</li>
               </ul>
             </div>
 
             <div className="timeline-project-links">
               <motion.a
-                href="https://github.com/Mit-Gandhi/smart-chatbot"
+                href="https://github.com/Mit-Gandhi/SkillXChange"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="timeline-project-link"
@@ -190,6 +192,17 @@ const Projects = () => {
               >
                 <Github size={18} />
                 GitHub Repository
+              </motion.a>
+              <motion.a
+                href="https://skillxchanged.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-project-link demo"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ExternalLink size={18} />
+                Live Demo
               </motion.a>
             </div>
           </div>
