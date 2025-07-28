@@ -101,18 +101,7 @@ const ContentProtection = () => {
       return false;
     };
 
-    // Clear clipboard silently
-    const clearClipboard = () => {
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText('').catch(() => {
-            // Silently fail if clipboard access is denied
-          });
-        }
-      } catch (err) {
-        // Silently fail if clipboard access is denied
-      }
-    };
+    // Clipboard clearing removed to prevent permission dialog
 
     // Silent developer tools detection (removed alert)
     const blockDevTools = () => {
