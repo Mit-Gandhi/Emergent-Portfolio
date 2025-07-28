@@ -197,7 +197,6 @@ const ContentProtection = () => {
     // Cleanup function
     return () => {
       try {
-        clearInterval(clipboardInterval);
         document.removeEventListener('contextmenu', disableRightClick);
         document.removeEventListener('selectstart', disableSelection);
         // Remove the custom mousedown listeners
