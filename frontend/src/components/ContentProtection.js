@@ -193,9 +193,6 @@ const ContentProtection = () => {
     // Initialize protections
     disableConsole();
     blockDevTools();
-    
-    // Clear clipboard periodically
-    const clipboardInterval = setInterval(clearClipboard, 10000); // Reduced frequency
 
     // Cleanup function
     return () => {
