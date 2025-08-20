@@ -18,7 +18,24 @@ body {
   padding: 0;
 }
 
-/* Projects Page Styles */
+/* Projects Page with Feature Cards */
+.projects-page-feature-cards {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.projects-content-wrapper {
+  padding-top: 6rem;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Legacy styles for timeline (keeping for backward compatibility) */
 .projects-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -289,177 +306,6 @@ body {
   max-width: 600px !important;
 }
 
-/* Grid Fix */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* Project Card */
-.project-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  will-change: transform;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  max-width: 100%;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.project-link {
-  background: #10b981;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  will-change: transform;
-}
-
-.project-link:hover {
-  background: #059669;
-  transform: scale(1.1);
-}
-
-.project-content {
-  padding: 2rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.project-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 1rem;
-  word-wrap: break-word;
-}
-
-.project-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  word-wrap: break-word;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-.tech-tag {
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-sizing: border-box;
-}
-
-.project-features {
-  margin-top: 1.5rem;
-}
-
-.project-features h4 {
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-.project-features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-features li {
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-  padding-left: 1rem;
-  position: relative;
-  word-wrap: break-word;
-}
-
-.project-features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #10b981;
-  font-weight: bold;
-}
-
 /* Projects Footer */
 .projects-footer {
   text-align: center;
@@ -522,20 +368,12 @@ body {
     padding: 6rem 1rem 2rem;
   }
 
+  .projects-content-wrapper {
+    padding-top: 5rem;
+  }
+
   .page-title {
     font-size: 2rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    margin-bottom: 2rem;
-  }
-
-  .project-content {
-    padding: 1.5rem;
   }
 
   .projects-footer {
@@ -578,14 +416,6 @@ body {
 @media (max-width: 480px) {
   .page-title {
     font-size: 1.5rem;
-  }
-
-  .project-title {
-    font-size: 1.25rem;
-  }
-
-  .project-description {
-    font-size: 0.9rem;
   }
 
   .projects-footer h2 {

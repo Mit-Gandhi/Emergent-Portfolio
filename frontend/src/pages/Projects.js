@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Code, Database, Eye, MessageSquare, Brain, Zap } from 'lucide-react';
+import { Github } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import { Timeline } from '../components/ui/timeline';
+import { FeatureCards } from '../components/ui/FeatureCards';
+import '../components/ui/FeatureCards.css';
 import './Projects.css';
 
 const Projects = () => {
@@ -37,236 +38,74 @@ const Projects = () => {
     };
   }, []);
 
-  const getTechIcon = (tech) => {
-    switch (tech.toLowerCase()) {
-      case 'machine learning':
-      case 'ml':
-        return <Brain size={16} />;
-      case 'deep learning':
-      case 'dl':
-        return <Zap size={16} />;
-      case 'computer vision':
-      case 'cv':
-        return <Eye size={16} />;
-      case 'nlp':
-      case 'natural language processing':
-        return <MessageSquare size={16} />;
-      case 'database':
-      case 'mongodb':
-      case 'sql':
-        return <Database size={16} />;
-      default:
-        return <Code size={16} />;
-    }
-  };
-
-  const projects = [
+  const projectCards = [
     {
       title: "CrimeVision AI",
-      content: (
-        <div className="timeline-project">
-          <div className="timeline-project-header">
-            <img 
-              src="/images/banner1.jpg" 
-              alt="CrimeVision AI - Criminal Detection System"
-              className="timeline-project-image"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-              onError={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop';
-              }}
-            />
-          </div>
-          <div className="timeline-project-content">
-            <h4 className="timeline-project-title">CrimeVision AI</h4>
-            <p className="timeline-project-description">
-              An innovative AI-driven criminal detection system developed during HackWithGujarat. 
-              Utilizes computer vision and machine learning algorithms to identify and track suspicious activities in real-time surveillance footage.
-            </p>
-            
-            <div className="timeline-project-tech">
-              {["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"].map((tech, index) => (
-                <span key={index} className="timeline-tech-tag">
-                  {getTechIcon(tech)}
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="timeline-project-features">
-              <h5>Key Features:</h5>
-              <ul>
-                <li>Real-time criminal detection in surveillance footage</li>
-                <li>Advanced facial recognition and matching</li>
-                <li>Suspicious activity pattern recognition</li>
-                <li>Automated alert system for law enforcement</li>
-                <li>High accuracy detection algorithms</li>
-              </ul>
-            </div>
-
-            <div className="timeline-project-links">
-              <motion.a
-                href="https://github.com/Mit-Gandhi/Hack_with_gujarat"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Github size={18} />
-                GitHub Repository
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      ),
+      description: "An innovative AI-driven criminal detection system developed during HackWithGujarat. Utilizes computer vision and machine learning algorithms to identify and track suspicious activities in real-time surveillance footage.",
+      features: [
+        "Real-time criminal detection in surveillance footage",
+        "Advanced facial recognition and matching",
+        "Suspicious activity pattern recognition",
+        "Automated alert system for law enforcement",
+        "High accuracy detection algorithms"
+      ],
+      image: "/images/banner1.jpg",
+      githubLink: "https://github.com/Mit-Gandhi/Hack_with_gujarat",
+      techStack: ["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"]
     },
     {
-      title: "Brain Tumor Detection",
-      content: (
-        <div className="timeline-project">
-          <div className="timeline-project-header">
-            <img 
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80" 
-              alt="Brain Tumor Detection - Medical AI System"
-              className="timeline-project-image"
-              loading="eager"
-              decoding="async"
-              onError={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop';
-              }}
-            />
-          </div>
-          <div className="timeline-project-content">
-            <h4 className="timeline-project-title">Brain Tumor Detection System</h4>
-            <p className="timeline-project-description">
-              An advanced deep learning system for automated brain tumor detection and classification using medical imaging data. 
-              Utilizes state-of-the-art computer vision techniques with YOLOv11 and convolutional neural networks to analyze MRI and CT scans with high precision.
-            </p>
-            
-            <div className="timeline-project-tech">
-              {["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"].map((tech, index) => (
-                <span key={index} className="timeline-tech-tag">
-                  {getTechIcon(tech)}
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="timeline-project-features">
-              <h5>Key Features:</h5>
-              <ul>
-                <li>Automated tumor detection and classification</li>
-                <li>High-precision medical image analysis</li>
-                <li>Multi-class brain tumor identification</li>
-                <li>Real-time processing of MRI/CT scans</li>
-                <li>DICOM format compatibility</li>
-                <li>Clinical-grade accuracy metrics</li>
-              </ul>
-            </div>
-
-            <div className="timeline-project-links">
-              <motion.a
-                href="https://github.com/Mit-Gandhi/Brain-Tumor-Detection"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Github size={18} />
-                GitHub Repository
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      ),
+      title: "Brain Tumor Detection System",
+      description: "An advanced deep learning system for automated brain tumor detection and classification using medical imaging data. Utilizes state-of-the-art computer vision techniques with YOLOv11 and convolutional neural networks to analyze MRI and CT scans with high precision.",
+      features: [
+        "Automated tumor detection and classification",
+        "High-precision medical image analysis",
+        "Multi-class brain tumor identification",
+        "Real-time processing of MRI/CT scans",
+        "DICOM format compatibility",
+        "Clinical-grade accuracy metrics"
+      ],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80",
+      githubLink: "https://github.com/Mit-Gandhi/Brain-Tumor-Detection",
+      techStack: ["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"]
     },
     {
       title: "SkillXChange",
-      content: (
-        <div className="timeline-project">
-          <div className="timeline-project-header">
-            <img 
-              src="/images/skillxchange.jpg" 
-              alt="SkillXChange - Peer-to-Peer Learning Platform"
-              className="timeline-project-image"
-              loading="eager"
-              decoding="async"
-              onError={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop';
-              }}
-            />
-          </div>
-          <div className="timeline-project-content">
-            <h4 className="timeline-project-title">SkillXChange</h4>
-            <p className="timeline-project-description">
-              A comprehensive skill exchange platform that connects individuals looking to learn new skills with those willing to teach. 
-              Built with modern web technologies, SkillXChange facilitates peer-to-peer learning by enabling users to offer their expertise 
-              in exchange for learning opportunities in other domains. The platform features user profiles, skill matching, and interactive learning sessions.
-            </p>
-            
-            <div className="timeline-project-tech">
-              {["React", "Vite.js", "Firebase Firestore", "Tailwind CSS", "Firebase Auth"].map((tech, index) => (
-                <span key={index} className="timeline-tech-tag">
-                  {getTechIcon(tech)}
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="timeline-project-features">
-              <h5>Key Features:</h5>
-              <ul>
-                <li>User authentication and profile management</li>
-                <li>Skill listing and matching algorithm</li>
-                <li>Real-time messaging and communication</li>
-                <li>Session scheduling and management</li>
-                <li>Rating and review system</li>
-                <li>Search and filter functionality</li>
-              </ul>
-            </div>
-
-            <div className="timeline-project-links">
-              <motion.a
-                href="https://github.com/Mit-Gandhi/SkillXChange"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Github size={18} />
-                GitHub Repository
-              </motion.a>
-              <motion.a
-                href="https://skillxchanged.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline-project-link demo"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <ExternalLink size={18} />
-                Live Demo
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      ),
+      description: "A comprehensive skill exchange platform that connects individuals looking to learn new skills with those willing to teach. Built with modern web technologies, SkillXChange facilitates peer-to-peer learning by enabling users to offer their expertise in exchange for learning opportunities in other domains.",
+      features: [
+        "User authentication and profile management",
+        "Skill listing and matching algorithm",
+        "Real-time messaging and communication",
+        "Session scheduling and management",
+        "Rating and review system",
+        "Search and filter functionality"
+      ],
+      image: "/images/skillxchange.jpg",
+      githubLink: "https://github.com/Mit-Gandhi/SkillXChange",
+      demoLink: "https://skillxchanged.netlify.app/",
+      techStack: ["React", "Vite.js", "Firebase Firestore", "Tailwind CSS", "Firebase Auth"]
     },
+    {
+      title: "AI Portfolio Hub",
+      description: "A modern, responsive portfolio website showcasing AI/ML projects with interactive animations and custom cursor effects. Features smooth page transitions, content protection, and a beautiful green theme design optimized for user experience.",
+      features: [
+        "Interactive robot animations and custom cursor",
+        "Smooth page transitions with loading screens",
+        "Responsive design with mobile optimization",
+        "Content protection and security features",
+        "EmailJS integration for contact form",
+        "SEO optimized with meta tags"
+      ],
+      image: "/images/mit.jpg",
+      githubLink: "https://github.com/Mit-Gandhi/Portfolio",
+      techStack: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "EmailJS", "Three.js"]
+    }
   ];
 
   return (
-    <div className="projects-page-timeline">
+    <div className="projects-page-feature-cards">
       <Navigation />
-      <div className="timeline-wrapper">
-        <Timeline data={projects} />
+      <div className="projects-content-wrapper">
+        <FeatureCards cards={projectCards} />
       </div>
       
       <motion.div
