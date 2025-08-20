@@ -17,50 +17,6 @@ interface FeatureCardsProps {
 }
 
 export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const controls = useAnimation();
-  const isInView = useInView(containerRef, { 
-    once: false, 
-    margin: "-100px 0px -100px 0px" 
-  });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 100,
-      scale: 0.9
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94] as any,
-        type: "spring" as const,
-        stiffness: 100,
-        damping: 20
-      }
-    }
-  };
-
   return (
     <div className="feature-cards-section">
       {/* Header Section */}
