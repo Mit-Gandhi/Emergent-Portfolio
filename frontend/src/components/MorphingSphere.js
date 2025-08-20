@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const StaticRobotImage = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
+const RobotVideo = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   
   return (
-    <div className="robot-image-wrapper">
-      <img 
-        src="/images/robot.png"
-        alt="AI Robot Assistant"
-        className="robot-image"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-        onLoad={() => setImageLoaded(true)}
+    <div className="robot-video-wrapper">
+      <video 
+        src="/images/hi3d.mp4"
+        className="robot-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        onLoadedData={() => setVideoLoaded(true)}
         onError={(e) => {
-          console.log('Robot image failed to load, using fallback');
-          e.target.src = 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=600&fit=crop';
+          console.log('Robot video failed to load');
         }}
         onContextMenu={(e) => e.preventDefault()}
-        onDragStart={(e) => e.preventDefault()}
         onSelectStart={(e) => e.preventDefault()}
         onMouseDown={(e) => e.preventDefault()}
         style={{
@@ -27,7 +26,7 @@ const StaticRobotImage = () => {
           height: '100%',
           objectFit: 'contain',
           transition: 'opacity 0.3s ease',
-          opacity: imageLoaded ? 1 : 0.7,
+          opacity: videoLoaded ? 1 : 0.7,
           borderRadius: '20px',
           pointerEvents: 'none',
           userSelect: 'none',
