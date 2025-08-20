@@ -44,7 +44,7 @@ function AppContent() {
           initImageObserver();
         }, 100);
       }, 50);
-    }, 300); // Show loading for 0.3 seconds
+    }, 50); // Show loading for 0.05 seconds
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
