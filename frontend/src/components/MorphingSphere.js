@@ -78,9 +78,9 @@ const MorphingSphereContainer = () => {
         )}
       </AnimatePresence>
 
-      {/* Static Robot Image */}
-      <div className="robot-image-container">
-        <StaticRobotImage />
+      {/* Robot Video */}
+      <div className="robot-video-container">
+        <RobotVideo />
       </div>
     </div>
   );
