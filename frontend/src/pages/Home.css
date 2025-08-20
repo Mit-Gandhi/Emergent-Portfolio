@@ -110,8 +110,8 @@
 }
 
 .robot-container {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   position: relative;
   display: flex;
   align-items: center;
