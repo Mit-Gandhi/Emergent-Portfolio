@@ -170,7 +170,7 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
