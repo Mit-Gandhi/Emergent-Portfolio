@@ -1,19 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const RobotVideo = () => {
+const RobotVideo = ({ onVideoStart }) => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(null);
+  const videoRef = React.useRef(null);
+  
+  // Force immediate video loading and playing
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Preload the video immediately
+      video.load();
+      
+      // Attempt to play as soon as possible
+      const attemptPlay = async () => {
+        try {
+          await video.play();
+          onVideoStart(); // Trigger welcome message when video starts
+        } catch (error) {
+          console.log('Auto-play prevented, will play on user interaction:', error);
+        }
+      };
+      
+      // Set up event listeners for faster response
+      video.addEventListener('loadeddata', attemptPlay);
+      video.addEventListener('canplay', attemptPlay);
+      
+      return () => {
+        video.removeEventListener('loadeddata', attemptPlay);
+        video.removeEventListener('canplay', attemptPlay);
+      };
+    }
+  }, [onVideoStart]);
   
   return (
     <div className="robot-video-wrapper">
       <video 
+        ref={videoRef}
         className="robot-video"
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
+        priority="high"
         onLoadedData={() => {
           setVideoLoaded(true);
           console.log('Video loaded successfully');
@@ -21,6 +52,10 @@ const RobotVideo = () => {
         onError={(e) => {
           console.error('Robot video failed to load:', e.target.error);
           setVideoError(e.target.error);
+        }}
+        onPlay={() => {
+          console.log('Video started playing');
+          onVideoStart(); // Trigger welcome message when video plays
         }}
         onCanPlay={() => {
           console.log('Video can start playing');
@@ -33,6 +68,7 @@ const RobotVideo = () => {
           width: '100%',
           height: '100%',
           objectFit: 'contain',
+          borderRadius: '25px',
           transition: 'opacity 0.3s ease',
           opacity: videoLoaded ? 1 : 0.7,
           pointerEvents: 'none',
