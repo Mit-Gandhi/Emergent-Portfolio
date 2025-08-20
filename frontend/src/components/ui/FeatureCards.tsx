@@ -53,8 +53,8 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        type: "spring",
+        ease: [0.25, 0.46, 0.45, 0.94] as any,
+        type: "spring" as const,
         stiffness: 100,
         damping: 20
       }
