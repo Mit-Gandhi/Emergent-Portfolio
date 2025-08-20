@@ -168,11 +168,11 @@
   }
   
   .robot-image-wrapper, .robot-video-wrapper {
-    max-height: 500px;
+    max-height: 400px;
   }
   
   .robot-image, .robot-video {
-    max-height: 500px;
+    max-height: 400px;
   }
   
   .robot-image-container, .robot-video-container {
