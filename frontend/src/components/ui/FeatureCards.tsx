@@ -105,7 +105,7 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
             variants={cardVariants}
             whileHover={{ 
               y: -10,
-              transition: { duration: 0.3, ease: "easeOut" }
+              transition: { duration: 0.3, ease: "easeOut" as any }
             }}
             className="feature-card"
           >
