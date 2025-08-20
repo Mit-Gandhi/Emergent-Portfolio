@@ -3,24 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const RobotVideo = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(null);
   
   return (
     <div className="robot-video-wrapper">
       <video 
-        src="/images/hi3d.mp4"
         className="robot-video"
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        onLoadedData={() => setVideoLoaded(true)}
+        onLoadedData={() => {
+          setVideoLoaded(true);
+          console.log('Video loaded successfully');
+        }}
         onError={(e) => {
-          console.log('Robot video failed to load');
+          console.error('Robot video failed to load:', e.target.error);
+          setVideoError(e.target.error);
+        }}
+        onCanPlay={() => {
+          console.log('Video can start playing');
+        }}
+        onLoadStart={() => {
+          console.log('Video load started');
         }}
         onContextMenu={(e) => e.preventDefault()}
-        onSelectStart={(e) => e.preventDefault()}
-        onMouseDown={(e) => e.preventDefault()}
         style={{
           width: '100%',
           height: '100%',
@@ -30,11 +38,28 @@ const RobotVideo = () => {
           borderRadius: '20px',
           pointerEvents: 'none',
           userSelect: 'none',
-          webkitUserSelect: 'none',
-          mozUserSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
           msUserSelect: 'none'
         }}
-      />
+      >
+        <source src="/images/hi3d.mp4" type="video/mp4" />
+        <source src="/images/hi3d.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+      {videoError && (
+        <div style={{ 
+          position: 'absolute', 
+          top: '50%', 
+          left: '50%', 
+          transform: 'translate(-50%, -50%)',
+          color: 'red',
+          fontSize: '14px',
+          textAlign: 'center'
+        }}>
+          Video Error: {videoError.message || 'Failed to load video'}
+        </div>
+      )}
     </div>
   );
 };
