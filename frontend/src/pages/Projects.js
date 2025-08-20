@@ -54,19 +54,19 @@ const Projects = () => {
       techStack: ["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"]
     },
     {
-      title: "Brain Tumor Detection System",
-      description: "An advanced deep learning system for automated brain tumor detection and classification using medical imaging data. Utilizes state-of-the-art computer vision techniques with YOLOv11 and convolutional neural networks to analyze MRI and CT scans with high precision.",
+      title: "Intelligent AI Delivery Agent",
+      description: "An AI-powered voice-enabled assistant for delivery-related tasks that combines Retrieval-Augmented Generation (RAG) with multilingual voice interaction. The system answers delivery-related queries using a knowledge base of documents and provides natural responses in multiple languages including Hindi and English.",
       features: [
-        "Automated tumor detection and classification",
-        "High-precision medical image analysis",
-        "Multi-class brain tumor identification",
-        "Real-time processing of MRI/CT scans",
-        "DICOM format compatibility",
-        "Clinical-grade accuracy metrics"
+        "Voice interaction with multilingual support (Hindi, English)",
+        "Document-aware responses using RAG architecture",
+        "FAISS vector search for fast semantic retrieval",
+        "Google Gemini integration for high-quality answers",
+        "Real-time conversation loop with continuous Q&A",
+        "Speech recognition and text-to-speech capabilities"
       ],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80",
-      githubLink: "https://github.com/Mit-Gandhi/Brain-Tumor-Detection",
-      techStack: ["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"]
+      image: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=600&h=400&fit=crop&auto=format&q=80",
+      githubLink: "https://github.com/Mit-Gandhi/RAG-Based-Delivery-Agent",
+      techStack: ["Python", "FastAPI", "LangChain", "FAISS", "Google Gemini", "React.js", "Vite", "TailwindCSS", "gTTS", "SpeechRecognition"]
     },
     {
       title: "SkillXChange",
@@ -85,19 +85,19 @@ const Projects = () => {
       techStack: ["React", "Vite.js", "Firebase Firestore", "Tailwind CSS", "Firebase Auth"]
     },
     {
-      title: "AI Portfolio Hub",
-      description: "A modern, responsive portfolio website showcasing AI/ML projects with interactive animations and custom cursor effects. Features smooth page transitions, content protection, and a beautiful green theme design optimized for user experience.",
+      title: "Brain Tumor Detection System",
+      description: "An advanced deep learning system for automated brain tumor detection and classification using medical imaging data. Utilizes state-of-the-art computer vision techniques with YOLOv11 and convolutional neural networks to analyze MRI and CT scans with high precision.",
       features: [
-        "Interactive robot animations and custom cursor",
-        "Smooth page transitions with loading screens",
-        "Responsive design with mobile optimization",
-        "Content protection and security features",
-        "EmailJS integration for contact form",
-        "SEO optimized with meta tags"
+        "Automated tumor detection and classification",
+        "High-precision medical image analysis",
+        "Multi-class brain tumor identification",
+        "Real-time processing of MRI/CT scans",
+        "DICOM format compatibility",
+        "Clinical-grade accuracy metrics"
       ],
-      image: "/images/mit.jpg",
-      githubLink: "https://github.com/Mit-Gandhi/Portfolio",
-      techStack: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "EmailJS", "Three.js"]
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80",
+      githubLink: "https://github.com/Mit-Gandhi/Brain-Tumor-Detection",
+      techStack: ["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"]
     }
   ];
 
