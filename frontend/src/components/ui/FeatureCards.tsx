@@ -29,6 +29,14 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
         >
           My Projects.
         </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="feature-cards-description"
+        >
+          Explore my projects
+        </motion.p>
       </div>
 
       {/* Cards Container */}
