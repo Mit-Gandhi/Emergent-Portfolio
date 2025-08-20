@@ -71,7 +71,7 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="feature-cards-title"
         >
-          My Projects. Four Perspectives.
+          My Projects.
         </motion.h2>
         <motion.h3 
           initial={{ opacity: 0, y: -20 }}
