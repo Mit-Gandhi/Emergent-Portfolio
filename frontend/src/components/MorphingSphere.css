@@ -179,15 +179,15 @@
     padding: 0.5rem 1rem;
   }
   
-  .robot-image-wrapper {
+  .robot-image-wrapper, .robot-video-wrapper {
     max-height: 350px;
   }
   
-  .robot-image {
+  .robot-image, .robot-video {
     max-height: 350px;
   }
   
-  .robot-image-container {
+  .robot-image-container, .robot-video-container {
     min-height: 300px;
   }
 }
