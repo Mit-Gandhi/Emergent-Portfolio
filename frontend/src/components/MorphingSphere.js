@@ -101,18 +101,23 @@ const RobotVideo = ({ onVideoStart }) => {
 
 const MorphingSphereContainer = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [hasShownWelcome, setHasShownWelcome] = useState(false);
 
-  // Function to handle video start and show welcome message
+  // Function to handle video start and show welcome message only once
   const handleVideoStart = React.useCallback(() => {
-    setShowPopup(true);
-    
-    // Hide popup after 4 seconds
-    const hideTimer = setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
+    // Only show welcome message if it hasn't been shown before
+    if (!hasShownWelcome) {
+      setShowPopup(true);
+      setHasShownWelcome(true);
+      
+      // Hide popup after 4 seconds
+      const hideTimer = setTimeout(() => {
+        setShowPopup(false);
+      }, 4000);
 
-    return () => clearTimeout(hideTimer);
-  }, []);
+      return () => clearTimeout(hideTimer);
+    }
+  }, [hasShownWelcome]);
 
   return (
     <div className="morphing-sphere-container">
