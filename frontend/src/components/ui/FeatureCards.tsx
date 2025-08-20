@@ -27,13 +27,13 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="feature-cards-title"
         >
-          My Projects.
+          My Projects
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="feature-cards-description"
+          className="page-subtitle"
         >
           Explore my projects
         </motion.p>
