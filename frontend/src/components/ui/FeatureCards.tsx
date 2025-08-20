@@ -76,17 +76,17 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
       </div>
 
       {/* Cards Container */}
-      <motion.div
-        ref={containerRef}
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-        className="feature-cards-container"
-      >
+      <div className="feature-cards-container">
         {cards.map((card, index) => (
           <motion.div
             key={index}
-            variants={cardVariants}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.6, 
+              delay: index * 0.2,
+              ease: "easeOut"
+            }}
             whileHover={{ 
               y: -10,
               transition: { duration: 0.3, ease: "easeOut" as any }
