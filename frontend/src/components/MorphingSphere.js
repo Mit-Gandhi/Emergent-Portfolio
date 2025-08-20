@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const RobotVideo = ({ onVideoStart }) => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(null);
+  const [hasTriggeredWelcome, setHasTriggeredWelcome] = useState(false);
   const videoRef = React.useRef(null);
   
   // Force immediate video loading and playing
@@ -17,7 +18,6 @@ const RobotVideo = ({ onVideoStart }) => {
       const attemptPlay = async () => {
         try {
           await video.play();
-          onVideoStart(); // Trigger welcome message when video starts
         } catch (error) {
           console.log('Auto-play prevented, will play on user interaction:', error);
         }
@@ -32,7 +32,16 @@ const RobotVideo = ({ onVideoStart }) => {
         video.removeEventListener('canplay', attemptPlay);
       };
     }
-  }, [onVideoStart]);
+  }, []);
+  
+  // Handle play event - only trigger welcome on first play
+  const handlePlay = React.useCallback(() => {
+    console.log('Video started playing');
+    if (!hasTriggeredWelcome && onVideoStart) {
+      setHasTriggeredWelcome(true);
+      onVideoStart(); // Only trigger welcome message on first play
+    }
+  }, [hasTriggeredWelcome, onVideoStart]);
   
   return (
     <div className="robot-video-wrapper">
@@ -53,10 +62,7 @@ const RobotVideo = ({ onVideoStart }) => {
           console.error('Robot video failed to load:', e.target.error);
           setVideoError(e.target.error);
         }}
-        onPlay={() => {
-          console.log('Video started playing');
-          onVideoStart(); // Trigger welcome message when video plays
-        }}
+        onPlay={handlePlay}
         onCanPlay={() => {
           console.log('Video can start playing');
         }}
