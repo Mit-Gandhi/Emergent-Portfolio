@@ -35,7 +35,6 @@ const RobotVideo = () => {
           objectFit: 'contain',
           transition: 'opacity 0.3s ease',
           opacity: videoLoaded ? 1 : 0.7,
-          borderRadius: '20px',
           pointerEvents: 'none',
           userSelect: 'none',
           WebkitUserSelect: 'none',
