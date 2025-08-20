@@ -73,22 +73,6 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
         >
           My Projects.
         </motion.h2>
-        <motion.h3 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="feature-cards-subtitle"
-        >
-          Achieve Optimal Innovation.
-        </motion.h3>
-        <motion.p 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="feature-cards-description"
-        >
-          Every project is designed to solve real-world problems through innovative AI/ML solutions
-        </motion.p>
       </div>
 
       {/* Cards Container */}
