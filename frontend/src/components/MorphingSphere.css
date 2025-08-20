@@ -139,7 +139,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .sphere-welcome-message {
-    top: -2.5rem;
+    top: -1.2rem;
   }
   
   .welcome-content {
