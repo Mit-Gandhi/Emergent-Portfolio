@@ -102,21 +102,16 @@ const RobotVideo = ({ onVideoStart }) => {
 const MorphingSphereContainer = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    // Show popup after 1 second
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 1000);
-
+  // Function to handle video start and show welcome message
+  const handleVideoStart = React.useCallback(() => {
+    setShowPopup(true);
+    
     // Hide popup after 4 seconds
     const hideTimer = setTimeout(() => {
       setShowPopup(false);
-    }, 5000);
+    }, 4000);
 
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(hideTimer);
-    };
+    return () => clearTimeout(hideTimer);
   }, []);
 
   return (
@@ -140,7 +135,7 @@ const MorphingSphereContainer = () => {
 
       {/* Robot Video */}
       <div className="robot-video-container">
-        <RobotVideo />
+        <RobotVideo onVideoStart={handleVideoStart} />
       </div>
     </div>
   );
