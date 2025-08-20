@@ -148,12 +148,12 @@
   }
   
   .robot-image-wrapper, .robot-video-wrapper {
-    max-width: 90vw;
-    max-height: 450px;
+    max-width: 95vw;
+    max-height: 600px;
   }
   
   .robot-image, .robot-video {
-    max-height: 450px;
+    max-height: 600px;
   }
 }
 
