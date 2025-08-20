@@ -74,6 +74,8 @@ function AppContent() {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
+              {/* Catch-all route for any unmatched paths */}
+              <Route path="*" element={<Home />} />
             </Routes>
           </motion.div>
         )}
