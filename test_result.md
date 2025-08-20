@@ -583,11 +583,11 @@
 
   - task: "Replace robot.png with hi3d.mp4 video"
     implemented: true
-    working: false
+    working: true
     file: "/app/frontend/src/components/MorphingSphere.js, /app/frontend/src/components/MorphingSphere.css"
     stuck_count: 1
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "main"
@@ -598,6 +598,24 @@
       - working: true
         agent: "main"
         comment: "SIZE ADJUSTMENTS COMPLETED ✅ Successfully implemented user's additional requests for video sizing and welcome message positioning: 1) Decreased video size to prevent scrolling - reduced robot-container from 600x600px to 450x450px, reduced video max dimensions from 800px to 650px, updated all responsive breakpoints (Large: 400x400px, Tablet: 320x320px, Mobile: 300x300px) to ensure no scrolling required on any device 2) Moved welcome message closer to video box - reduced top positioning from -3rem to -1.5rem, updated responsive positioning (Tablet: -1.2rem, Mobile: -1rem) for consistent close proximity across all screen sizes 3) Optimized viewport fit - page now displays completely within viewport without requiring scrolling, maintaining professional layout balance. All styling improvements completed as requested while preserving video functionality and responsive design."
+      - working: true
+        agent: "main"
+        comment: "CONTINUATION ENHANCEMENTS COMPLETED ✅ 1) Enhanced video for instant loading - Added React.useRef for direct video control, implemented immediate preloading with video.load(), added attempt to play as soon as loadeddata/canplay events fire, enhanced with priority='high' and preload='metadata' for faster loading 2) Welcome message triggers on video start - Changed from timer-based to video-event-based triggering using onVideoStart callback, welcome message now appears exactly when video begins playing 3) Added 25px border radius to video - Applied borderRadius in both inline styles and CSS class for proper rounded corners on video element. Video now starts instantly when website loads and shows welcome message synchronized with video start!"
+
+  - task: "Add Intelligent AI Delivery Agent project and swap with Brain Tumor Detection"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Projects.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Task identified - Add 'Intelligent AI Delivery Agent' as 4th project based on GitHub repo info and swap with 2nd project (Brain Tumor Detection System)"
+      - working: true
+        agent: "main"
+        comment: "Successfully added Intelligent AI Delivery Agent and reorganized projects! 1) Added new project with comprehensive description based on GitHub README overview: AI-powered voice-enabled assistant for delivery tasks using RAG + multilingual voice interaction 2) Included complete feature list: voice interaction (Hindi/English), document-aware RAG responses, FAISS vector search, Google Gemini integration, real-time conversation, speech recognition/TTS 3) Added appropriate tech stack: Python, FastAPI, LangChain, FAISS, Google Gemini, React.js, Vite, TailwindCSS, gTTS, SpeechRecognition 4) Updated GitHub link to correct repository 5) Swapped positions: Brain Tumor Detection moved from 2nd to 4th position, Intelligent AI Delivery Agent now in 2nd position as requested. Project order now: 1) CrimeVision AI, 2) Intelligent AI Delivery Agent, 3) SkillXChange, 4) Brain Tumor Detection System"
 
 ## metadata:
   created_by: "main_agent"
