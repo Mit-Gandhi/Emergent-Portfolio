@@ -580,11 +580,11 @@
 
   - task: "Replace robot.png with hi3d.mp4 video"
     implemented: true
-    working: true
+    working: false
     file: "/app/frontend/src/components/MorphingSphere.js, /app/frontend/src/components/MorphingSphere.css"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
@@ -592,6 +592,9 @@
       - working: true
         agent: "main"
         comment: "Successfully replaced robot.png with hi3d.mp4 video! 1) Created RobotVideo component to replace StaticRobotImage 2) Video configured with autoPlay, loop, muted, playsInline for instant playback 3) Added preload='auto' for fast loading 4) Applied same styling with rounded corners and content protection 5) Updated CSS with robot-video classes for responsive design 6) Video plays continuously in loop without user interaction required"
+      - working: false
+        agent: "testing"
+        comment: "CRITICAL VIDEO ISSUE IDENTIFIED ❌ Comprehensive testing revealed that the hi3d.mp4 video is not playing due to codec compatibility issues. Browser error: 'DEMUXER_ERROR_NO_SUPPORTED_STREAMS: FFmpegDemuxer: no supported streams' indicates the video file contains unsupported codecs. Testing confirmed: 1) Video element is properly implemented with correct attributes (autoplay, loop, muted, playsInline, preload='auto') 2) Video has correct styling with 20px border radius as requested 3) Video is responsive across different screen sizes 4) Component structure is correct (MorphingSphere container found) 5) Welcome popup message is not appearing (likely due to video not loading) 6) Video file exists and is accessible via HTTP (13MB file size) but browser cannot decode the streams. SOLUTION NEEDED: Video file needs to be re-encoded with browser-compatible codecs (H.264 video + AAC audio) using tools like FFmpeg. Current video format is incompatible with web browsers."
 
 ## metadata:
   created_by: "main_agent"
