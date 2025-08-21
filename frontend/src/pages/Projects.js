@@ -49,7 +49,7 @@ const Projects = () => {
         "Automated alert system for law enforcement",
         "High accuracy detection algorithms"
       ],
-      image: "/images/banner1.jpg",
+      image: "/images/crimevisionai.png",
       githubLink: "https://github.com/Mit-Gandhi/Hack_with_gujarat",
       techStack: ["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"]
     },
