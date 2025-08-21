@@ -253,9 +253,7 @@
   transition: none;
 }
 
-.feature-card:hover .feature-card-image {
-  transform: scale(1.05);
-}
+
 
 .feature-card-image-overlay {
   position: absolute;
