@@ -79,7 +79,7 @@ const Projects = () => {
         "Rating and review system",
         "Search and filter functionality"
       ],
-      image: "/images/skillxchange.jpg",
+      image: "/images/skillxchange.png",
       githubLink: "https://github.com/Mit-Gandhi/SkillXChange",
       demoLink: "https://skillxchanged.netlify.app/",
       techStack: ["React", "Vite.js", "Firebase Firestore", "Tailwind CSS", "Firebase Auth"]
