@@ -95,7 +95,7 @@ const Projects = () => {
         "DICOM format compatibility",
         "Clinical-grade accuracy metrics"
       ],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&auto=format&q=80",
+      image: "/images/brain_tumor.png",
       githubLink: "https://github.com/Mit-Gandhi/Brain-Tumor-Detection",
       techStack: ["Deep Learning", "Computer Vision", "Medical Imaging", "YOLOv11", "TensorFlow", "Python", "OpenCV", "PyTorch"]
     }
