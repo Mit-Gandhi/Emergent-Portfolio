@@ -121,6 +121,17 @@ export const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => {
 
               {/* Right Side - Image/Preview */}
               <div className="feature-card-preview">
+                {/* Small Green Image Box */}
+                <div className="project-image-thumbnails">
+                  <div className="project-thumbnail-box">
+                    <img 
+                      src={card.image} 
+                      alt={`${card.title} thumbnail`}
+                      className="project-thumbnail-image"
+                    />
+                  </div>
+                </div>
+                
                 <div className="feature-card-image-container">
                   <img 
                     src={card.image} 
