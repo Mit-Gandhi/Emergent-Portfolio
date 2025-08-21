@@ -64,7 +64,7 @@ const Projects = () => {
         "Real-time conversation loop with continuous Q&A",
         "Speech recognition and text-to-speech capabilities"
       ],
-      image: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=600&h=400&fit=crop&auto=format&q=80",
+      image: "/images/Intelligent Delivery assistant.png",
       githubLink: "https://github.com/Mit-Gandhi/RAG-Based-Delivery-Agent",
       techStack: ["Python", "FastAPI", "LangChain", "FAISS", "Google Gemini", "React.js", "Vite", "TailwindCSS", "gTTS", "SpeechRecognition"]
     },
