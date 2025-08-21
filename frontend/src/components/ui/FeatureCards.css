@@ -413,6 +413,11 @@
     min-height: 200px;
   }
   
+  .project-thumbnail-box {
+    width: 80px;
+    height: 60px;
+  }
+  
   .feature-card-title {
     font-size: 1.4rem;
   }
