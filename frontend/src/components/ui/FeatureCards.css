@@ -360,6 +360,11 @@
     min-height: 200px;
   }
   
+  .feature-card-image-container {
+    height: 150px;
+    min-height: 150px;
+  }
+  
   .feature-card-title {
     font-size: 1.4rem;
   }
