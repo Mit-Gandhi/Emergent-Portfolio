@@ -255,6 +255,7 @@
   object-position: center;
   transition: none;
   display: block;
+  opacity: 1 !important;
 }
 
 
