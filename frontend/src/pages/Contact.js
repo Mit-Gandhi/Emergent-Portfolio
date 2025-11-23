@@ -117,7 +117,7 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       value: "Mit-Gandhi",
-      link: "https://github.com/Mit-Gandhi"
+      link: "https://github.com/@Mit-Gandhi"
     }
   ];
 
