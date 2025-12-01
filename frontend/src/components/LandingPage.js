@@ -7,7 +7,7 @@ import './MorphingSphere.css';
 
 const LandingPage = () => {
   const handleResumeDownload = () => {
-    window.open('https://drive.google.com/file/d/1jPubZc-G8G06rN1EyWvsRNLmy5v0tafq/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1Q7LKtssMdaEX11XS9J56m1T3xpOU7frK/view?usp=drivesdk, '_blank');
   };
 
   const handleContact = () => {
