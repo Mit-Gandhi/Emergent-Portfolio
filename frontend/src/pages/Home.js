@@ -8,7 +8,7 @@ import '../components/MorphingSphere.css';
 const Home = () => {
   const handleResumeDisplay = () => {
     // Display the resume directly in a new tab instead of downloading
-    window.open('https://drive.google.com/file/d/1Z--ZzyXMcTOhm3384xtgWWK8_GzJsJ6Q/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1Q7LKtssMdaEX11XS9J56m1T3xpOU7frK/view?usp=sharing', '_blank');
   };
 
   return (
