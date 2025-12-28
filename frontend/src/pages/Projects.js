@@ -54,6 +54,20 @@ const Projects = () => {
       techStack: ["Computer Vision", "Machine Learning", "Python", "GANs", "Deep Learning", "Firebase", "FAISS", "InsightFace"]
     },
     {
+      title: "FloatChat AI",
+      description: "A RAG-based conversational chatbot that enables users to query complex ARGO oceanographic data using natural language, eliminating the need for manual NetCDF file handling or deep domain expertise.",
+      features: [
+        "Natural-language interface for querying ARGO oceanographic datasets",
+        "Hybrid retrieval architecture combining FAISS vector database and PostgreSQL for fast, scalable data access",
+        "Gemini LLM-powered intelligent query pipeline that interprets user intent, extracts relevant filters/variables, and generates accurate, grounded summaries",
+        "Interactive map-based coordinate selection for pinpointing specific ocean locations",
+        "Dynamic ECharts visualizations for exploring ocean conditions through charts and graphs alongside conversational responses"
+  ],
+      image: "https://drive.google.com/uc?export=view&id=1BqTUMUINw44L96veiK-9LwnkHlOvHLVc",
+      githubLink: "https://github.com/Mit-Gandhi/FloatChat-AI",
+      techStack: ["Retrieval-Augmented Generation (RAG)", "Gemini LLM", "FAISS", "PostgreSQL", "ECharts", "TypeScript", "JavaScript", "Python", "NetCDF", "Geospatial Data", "Leaflet"]
+    },
+    {
       title: "Intelligent AI Delivery Agent",
       description: "An AI-powered voice-enabled assistant for delivery-related tasks that combines Retrieval-Augmented Generation (RAG) with multilingual voice interaction. The system answers delivery-related queries using a knowledge base of documents and provides natural responses in multiple languages including Hindi and English.",
       features: [
