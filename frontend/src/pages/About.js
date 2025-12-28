@@ -106,7 +106,7 @@ const About = () => {
                   <p className="company">KisanKonnect, Navi Mumbai</p>
                   <p className="duration">Dec 2025 - Present</p>
                   <p className="description">
-                    // Built and deployed machine learning models for predictive analytics, utilizing TensorFlow and PyTorch to process large datasets and improve accuracy by 25% in classification tasks.
+                    
                   </p>
                 </div>
 
