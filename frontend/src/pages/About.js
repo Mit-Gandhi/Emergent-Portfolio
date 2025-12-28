@@ -109,7 +109,6 @@ const About = () => {
                   // Built and deployed machine learning models for predictive analytics, utilizing TensorFlow and PyTorch to process large datasets and improve accuracy by 25% in classification tasks.
                 </p>
               </div>
-              <div className="section-content">
                 <div className="experience-item">
                   <h4>AI/ML Research Intern</h4>
                   <p className="company">CDAC, Mumbai</p>
@@ -118,7 +117,6 @@ const About = () => {
                     Developed a comprehensive system for facial analysis, integrating recognition, detection, and crowd-based object tracking.
                   </p>
                 </div>
-              </div>
             </div>
           </motion.div>
 
