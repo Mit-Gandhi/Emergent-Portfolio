@@ -102,6 +102,17 @@ const About = () => {
               </div>
               <div className="section-content">
                 <div className="experience-item">
+                  <h4>AI Engineer Intern</h4>
+                  <p className="company">KisanKonnect, Navi Mumbai</p>
+                  <p className="duration">Dec 2025 - Present</p>
+                  <p className="description">
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+              <div className="section-content">
+                <div className="experience-item">
                   <h4>AI/ML Research Intern</h4>
                   <p className="company">CDAC, Mumbai</p>
                   <p className="duration">Feb 2025 - March 2025</p>
