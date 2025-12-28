@@ -63,7 +63,7 @@ const Projects = () => {
         "Interactive map-based coordinate selection for pinpointing specific ocean locations",
         "Dynamic ECharts visualizations for exploring ocean conditions through charts and graphs alongside conversational responses"
   ],
-      image: "https://drive.google.com/uc?export=view&id=1BqTUMUINw44L96veiK-9LwnkHlOvHLVc",
+      image: "/images/floatchat.png",
       githubLink: "https://github.com/Mit-Gandhi/FloatChat-AI",
       techStack: ["Retrieval-Augmented Generation (RAG)", "Gemini LLM", "FAISS", "PostgreSQL", "ECharts", "TypeScript", "JavaScript", "Python", "NetCDF", "Geospatial Data", "Leaflet"]
     },
